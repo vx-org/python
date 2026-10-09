@@ -1,0 +1,11 @@
+/audit/
+/dist/
+/intake-source-dir/
+/source-audit/
+/source-downloads/
+__pycache__/
+*.pyc
+/tooling/
+/.checks/
+/.release-*.md
+/.pr-*.md

@@ -1,0 +1,786 @@
+{
+  "provenance": {
+    "assets": [
+      {
+        "github_asset_id": 24195911,
+        "name": "cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+        "release_tag": "20200822",
+        "sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89",
+        "size": 31429615,
+        "target": "x86_64-pc-windows-msvc",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst"
+      },
+      {
+        "github_asset_id": 24195897,
+        "name": "cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+        "release_tag": "20200822",
+        "sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543",
+        "size": 28357634,
+        "target": "x86_64-unknown-linux-gnu",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst"
+      },
+      {
+        "github_asset_id": 24211674,
+        "name": "cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+        "release_tag": "20200823",
+        "selection_reason": "20200823 corrects the previous macOS release's libintl.dylib dependency regression.",
+        "sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8",
+        "size": 26136896,
+        "target": "x86_64-apple-darwin",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst"
+      }
+    ],
+    "integrity": {
+      "cross_checks": [
+        "Official GitHub Release asset IDs, filenames and sizes matched the downloaded archives.",
+        "PyOxidizer b6e940361506e7dcb3b545baf181f213c8888cc6 pins Python 3.8.5 from the same releases, but supplies no independent SHA256 for these 3.7.9 assets."
+      ],
+      "method": "official-tls-intake",
+      "observed_on": "2026-10-09",
+      "publisher_digest": null,
+      "statement": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+      "upstream_digest_observation": "GitHub Release asset digest fields are null. The historical release has no checksum assets."
+    },
+    "mirror_tag": "python-3.7.9-pbs-20200823",
+    "publication_status": "candidate",
+    "required_targets": [
+      "x86_64-pc-windows-msvc",
+      "x86_64-unknown-linux-gnu",
+      "x86_64-apple-darwin"
+    ],
+    "schema_version": 1,
+    "version": "3.7.9"
+  },
+  "targets": [
+    {
+      "target": "x86_64-pc-windows-msvc",
+      "asset": {
+        "github_asset_id": 24195911,
+        "name": "cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+        "release_tag": "20200822",
+        "sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89",
+        "size": 31429615,
+        "target": "x86_64-pc-windows-msvc",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst"
+      },
+      "verified_local_sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89",
+      "member_count": 4748,
+      "member_kinds": {
+        "file": 4748
+      },
+      "top_level_entries": [
+        "python"
+      ],
+      "payload_structure_checks": {
+        "python_executables": [
+          "python/install/python.exe",
+          "python/install/Lib/venv/scripts/nt/python.exe"
+        ],
+        "python_headers": [
+          "python/install/include/Python.h"
+        ],
+        "python_link_libraries": [
+          "python/build/core/python37.lib",
+          "python/install/libs/python37.lib"
+        ],
+        "stdlib_os": [
+          "python/install/Lib/os.py"
+        ],
+        "stdlib_venv": [
+          "python/install/Lib/venv/__init__.py"
+        ],
+        "stdlib_ensurepip": [
+          "python/install/Lib/ensurepip/__init__.py"
+        ],
+        "stdlib_ssl": [
+          "python/install/Lib/ssl.py"
+        ],
+        "stdlib_ctypes": [
+          "python/install/Lib/ctypes/__init__.py"
+        ]
+      },
+      "resolved_internal_links": [],
+      "metadata": [
+        {
+          "archive_path": "python/PYTHON.json",
+          "audit_file": "metadata-000-PYTHON.json",
+          "sha256": "461fe150741425abdc0929567533f2a2e4a8b98eff03de9d1b015b37c95ee803",
+          "size": 55777
+        },
+        {
+          "archive_path": "python/install/LICENSE.txt",
+          "audit_file": "metadata-001-LICENSE.txt",
+          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+          "size": 12775
+        },
+        {
+          "archive_path": "python/install/tcl/tk8.6/license.terms",
+          "audit_file": "metadata-002-license.terms",
+          "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198",
+          "size": 2267
+        },
+        {
+          "archive_path": "python/install/tcl/tk8.6/demos/license.terms",
+          "audit_file": "metadata-003-license.terms",
+          "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198",
+          "size": 2267
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bdb.txt",
+          "audit_file": "metadata-004-LICENSE.bdb.txt",
+          "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+          "size": 7293
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bzip2.txt",
+          "audit_file": "metadata-005-LICENSE.bzip2.txt",
+          "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441",
+          "size": 1743
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.cpython.txt",
+          "audit_file": "metadata-006-LICENSE.cpython.txt",
+          "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494",
+          "size": 33177
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.gdbm.txt",
+          "audit_file": "metadata-007-LICENSE.gdbm.txt",
+          "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17",
+          "size": 35069
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libX11.txt",
+          "audit_file": "metadata-008-LICENSE.libX11.txt",
+          "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e",
+          "size": 47018
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libXau.txt",
+          "audit_file": "metadata-009-LICENSE.libXau.txt",
+          "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa",
+          "size": 1148
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libedit.txt",
+          "audit_file": "metadata-010-LICENSE.libedit.txt",
+          "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1",
+          "size": 1614
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libffi.txt",
+          "audit_file": "metadata-011-LICENSE.libffi.txt",
+          "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5",
+          "size": 1132
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.liblzma.txt",
+          "audit_file": "metadata-012-LICENSE.liblzma.txt",
+          "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca",
+          "size": 33
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libressl.txt",
+          "audit_file": "metadata-013-LICENSE.libressl.txt",
+          "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106",
+          "size": 6491
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libuuid.txt",
+          "audit_file": "metadata-014-LICENSE.libuuid.txt",
+          "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b",
+          "size": 1432
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libxcb.txt",
+          "audit_file": "metadata-015-LICENSE.libxcb.txt",
+          "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd",
+          "size": 1337
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.ncurses.txt",
+          "audit_file": "metadata-016-LICENSE.ncurses.txt",
+          "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca",
+          "size": 1333
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.openssl.txt",
+          "audit_file": "metadata-017-LICENSE.openssl.txt",
+          "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560",
+          "size": 6120
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.readline.txt",
+          "audit_file": "metadata-018-LICENSE.readline.txt",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "size": 35147
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.sqlite.txt",
+          "audit_file": "metadata-019-LICENSE.sqlite.txt",
+          "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719",
+          "size": 1481
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tcl.txt",
+          "audit_file": "metadata-020-LICENSE.tcl.txt",
+          "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16",
+          "size": 2255
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tix.txt",
+          "audit_file": "metadata-021-LICENSE.tix.txt",
+          "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5",
+          "size": 2826
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.zlib.txt",
+          "audit_file": "metadata-022-LICENSE.zlib.txt",
+          "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c",
+          "size": 995
+        }
+      ]
+    },
+    {
+      "target": "x86_64-unknown-linux-gnu",
+      "asset": {
+        "github_asset_id": 24195897,
+        "name": "cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+        "release_tag": "20200822",
+        "sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543",
+        "size": 28357634,
+        "target": "x86_64-unknown-linux-gnu",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst"
+      },
+      "verified_local_sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543",
+      "member_count": 3669,
+      "member_kinds": {
+        "directory": 220,
+        "file": 3436,
+        "symlink": 13
+      },
+      "top_level_entries": [
+        "python"
+      ],
+      "payload_structure_checks": {
+        "python_executables": [
+          "python/install/bin/python3",
+          "python/install/bin/python3.7",
+          "python/install/bin/python3.7m",
+          "python/install/include/python3.7m",
+          "python/install/lib/python3.7"
+        ],
+        "python_headers": [
+          "python/install/include/python3.7m/Python.h"
+        ],
+        "python_link_libraries": [
+          "python/install/lib/libpython3.7m.a",
+          "python/install/lib/libpython3.7m.so",
+          "python/install/lib/libpython3.7m.so.1.0",
+          "python/install/lib/python3.7/config-3.7m-x86_64-linux-gnu/libpython3.7m.a"
+        ],
+        "stdlib_os": [
+          "python/install/lib/python3.7/os.py"
+        ],
+        "stdlib_venv": [
+          "python/install/lib/python3.7/venv/__init__.py"
+        ],
+        "stdlib_ensurepip": [
+          "python/install/lib/python3.7/ensurepip/__init__.py"
+        ],
+        "stdlib_ssl": [
+          "python/install/lib/python3.7/ssl.py"
+        ],
+        "stdlib_ctypes": [
+          "python/install/lib/python3.7/ctypes/__init__.py"
+        ]
+      },
+      "resolved_internal_links": [
+        {
+          "source": "python/install/bin/2to3",
+          "target": "2to3-3.7",
+          "final_target": "python/install/bin/2to3-3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/idle3",
+          "target": "idle3.7",
+          "final_target": "python/install/bin/idle3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/pydoc3",
+          "target": "pydoc3.7",
+          "final_target": "python/install/bin/pydoc3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3",
+          "target": "python3.7",
+          "final_target": "python/install/bin/python3.7m",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3-config",
+          "target": "python3.7-config",
+          "final_target": "python/install/bin/python3.7m-config",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3.7",
+          "target": "python3.7m",
+          "final_target": "python/install/bin/python3.7m",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3.7-config",
+          "target": "python3.7m-config",
+          "final_target": "python/install/bin/python3.7m-config",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/pyvenv",
+          "target": "pyvenv-3.7",
+          "final_target": "python/install/bin/pyvenv-3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/libpython3.7m.a",
+          "target": "python3.7/config-3.7m-x86_64-linux-gnu/libpython3.7m.a",
+          "final_target": "python/install/lib/python3.7/config-3.7m-x86_64-linux-gnu/libpython3.7m.a",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/libpython3.7m.so",
+          "target": "libpython3.7m.so.1.0",
+          "final_target": "python/install/lib/libpython3.7m.so.1.0",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/pkgconfig/python-3.7m.pc",
+          "target": "python-3.7.pc",
+          "final_target": "python/install/lib/pkgconfig/python-3.7.pc",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/pkgconfig/python3.pc",
+          "target": "python-3.7.pc",
+          "final_target": "python/install/lib/pkgconfig/python-3.7.pc",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/share/man/man1/python3.1",
+          "target": "python3.7.1",
+          "final_target": "python/install/share/man/man1/python3.7.1",
+          "final_kind": "file"
+        }
+      ],
+      "metadata": [
+        {
+          "archive_path": "python/PYTHON.json",
+          "audit_file": "metadata-000-PYTHON.json",
+          "sha256": "5cb3d3fc63083081f5b1bfa54ed0a9e8a10ae903cfab1e53304d33874396fd0d",
+          "size": 53977
+        },
+        {
+          "archive_path": "python/install/lib/Tix8.4.3/license.terms",
+          "audit_file": "metadata-001-license.terms",
+          "sha256": "91ff35309038fcfab853c8634b7b743a179c211d8ff3cb174b579c8af3c3072d",
+          "size": 2828
+        },
+        {
+          "archive_path": "python/install/lib/python3.7/LICENSE.txt",
+          "audit_file": "metadata-002-LICENSE.txt",
+          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+          "size": 12775
+        },
+        {
+          "archive_path": "python/install/lib/tk8.6/demos/license.terms",
+          "audit_file": "metadata-003-license.terms",
+          "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198",
+          "size": 2267
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bdb.txt",
+          "audit_file": "metadata-004-LICENSE.bdb.txt",
+          "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+          "size": 7293
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bzip2.txt",
+          "audit_file": "metadata-005-LICENSE.bzip2.txt",
+          "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441",
+          "size": 1743
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.cpython.txt",
+          "audit_file": "metadata-006-LICENSE.cpython.txt",
+          "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494",
+          "size": 33177
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.gdbm.txt",
+          "audit_file": "metadata-007-LICENSE.gdbm.txt",
+          "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17",
+          "size": 35069
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libX11.txt",
+          "audit_file": "metadata-008-LICENSE.libX11.txt",
+          "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e",
+          "size": 47018
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libXau.txt",
+          "audit_file": "metadata-009-LICENSE.libXau.txt",
+          "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa",
+          "size": 1148
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libedit.txt",
+          "audit_file": "metadata-010-LICENSE.libedit.txt",
+          "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1",
+          "size": 1614
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libffi.txt",
+          "audit_file": "metadata-011-LICENSE.libffi.txt",
+          "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5",
+          "size": 1132
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.liblzma.txt",
+          "audit_file": "metadata-012-LICENSE.liblzma.txt",
+          "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca",
+          "size": 33
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libressl.txt",
+          "audit_file": "metadata-013-LICENSE.libressl.txt",
+          "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106",
+          "size": 6491
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libuuid.txt",
+          "audit_file": "metadata-014-LICENSE.libuuid.txt",
+          "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b",
+          "size": 1432
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libxcb.txt",
+          "audit_file": "metadata-015-LICENSE.libxcb.txt",
+          "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd",
+          "size": 1337
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.ncurses.txt",
+          "audit_file": "metadata-016-LICENSE.ncurses.txt",
+          "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca",
+          "size": 1333
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.openssl.txt",
+          "audit_file": "metadata-017-LICENSE.openssl.txt",
+          "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560",
+          "size": 6120
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.readline.txt",
+          "audit_file": "metadata-018-LICENSE.readline.txt",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "size": 35147
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.sqlite.txt",
+          "audit_file": "metadata-019-LICENSE.sqlite.txt",
+          "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719",
+          "size": 1481
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tcl.txt",
+          "audit_file": "metadata-020-LICENSE.tcl.txt",
+          "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16",
+          "size": 2255
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tix.txt",
+          "audit_file": "metadata-021-LICENSE.tix.txt",
+          "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5",
+          "size": 2826
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.zlib.txt",
+          "audit_file": "metadata-022-LICENSE.zlib.txt",
+          "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c",
+          "size": 995
+        }
+      ]
+    },
+    {
+      "target": "x86_64-apple-darwin",
+      "asset": {
+        "github_asset_id": 24211674,
+        "name": "cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+        "release_tag": "20200823",
+        "selection_reason": "20200823 corrects the previous macOS release's libintl.dylib dependency regression.",
+        "sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8",
+        "size": 26136896,
+        "target": "x86_64-apple-darwin",
+        "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst"
+      },
+      "verified_local_sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8",
+      "member_count": 3436,
+      "member_kinds": {
+        "file": 3424,
+        "symlink": 12
+      },
+      "top_level_entries": [
+        "python"
+      ],
+      "payload_structure_checks": {
+        "python_executables": [
+          "python/install/bin/python3",
+          "python/install/bin/python3.7",
+          "python/install/bin/python3.7m"
+        ],
+        "python_headers": [
+          "python/install/include/python3.7m/Python.h"
+        ],
+        "python_link_libraries": [
+          "python/install/lib/libpython3.7m.a",
+          "python/install/lib/libpython3.7m.dylib",
+          "python/install/lib/python3.7/config-3.7m-darwin/libpython3.7m.a"
+        ],
+        "stdlib_os": [
+          "python/install/lib/python3.7/os.py"
+        ],
+        "stdlib_venv": [
+          "python/install/lib/python3.7/venv/__init__.py"
+        ],
+        "stdlib_ensurepip": [
+          "python/install/lib/python3.7/ensurepip/__init__.py"
+        ],
+        "stdlib_ssl": [
+          "python/install/lib/python3.7/ssl.py"
+        ],
+        "stdlib_ctypes": [
+          "python/install/lib/python3.7/ctypes/__init__.py"
+        ]
+      },
+      "resolved_internal_links": [
+        {
+          "source": "python/install/bin/2to3",
+          "target": "2to3-3.7",
+          "final_target": "python/install/bin/2to3-3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/idle3",
+          "target": "idle3.7",
+          "final_target": "python/install/bin/idle3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/pydoc3",
+          "target": "pydoc3.7",
+          "final_target": "python/install/bin/pydoc3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3",
+          "target": "python3.7",
+          "final_target": "python/install/bin/python3.7m",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3-config",
+          "target": "python3.7-config",
+          "final_target": "python/install/bin/python3.7m-config",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3.7",
+          "target": "python3.7m",
+          "final_target": "python/install/bin/python3.7m",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/python3.7-config",
+          "target": "python3.7m-config",
+          "final_target": "python/install/bin/python3.7m-config",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/bin/pyvenv",
+          "target": "pyvenv-3.7",
+          "final_target": "python/install/bin/pyvenv-3.7",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/libpython3.7m.a",
+          "target": "python3.7/config-3.7m-darwin/libpython3.7m.a",
+          "final_target": "python/install/lib/python3.7/config-3.7m-darwin/libpython3.7m.a",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/pkgconfig/python-3.7m.pc",
+          "target": "python-3.7.pc",
+          "final_target": "python/install/lib/pkgconfig/python-3.7.pc",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/lib/pkgconfig/python3.pc",
+          "target": "python-3.7.pc",
+          "final_target": "python/install/lib/pkgconfig/python-3.7.pc",
+          "final_kind": "file"
+        },
+        {
+          "source": "python/install/share/man/man1/python3.1",
+          "target": "python3.7.1",
+          "final_target": "python/install/share/man/man1/python3.7.1",
+          "final_kind": "file"
+        }
+      ],
+      "metadata": [
+        {
+          "archive_path": "python/PYTHON.json",
+          "audit_file": "metadata-000-PYTHON.json",
+          "sha256": "9af6f7204b731a98b9b7019435e5cd49e33f62e8190d29ba24b0dd47b7526dd5",
+          "size": 80129
+        },
+        {
+          "archive_path": "python/install/lib/Tix8.4.3/license.terms",
+          "audit_file": "metadata-001-license.terms",
+          "sha256": "91ff35309038fcfab853c8634b7b743a179c211d8ff3cb174b579c8af3c3072d",
+          "size": 2828
+        },
+        {
+          "archive_path": "python/install/lib/python3.7/LICENSE.txt",
+          "audit_file": "metadata-002-LICENSE.txt",
+          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+          "size": 12775
+        },
+        {
+          "archive_path": "python/install/lib/tk8.6/demos/license.terms",
+          "audit_file": "metadata-003-license.terms",
+          "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198",
+          "size": 2267
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bdb.txt",
+          "audit_file": "metadata-004-LICENSE.bdb.txt",
+          "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+          "size": 7293
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.bzip2.txt",
+          "audit_file": "metadata-005-LICENSE.bzip2.txt",
+          "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441",
+          "size": 1743
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.cpython.txt",
+          "audit_file": "metadata-006-LICENSE.cpython.txt",
+          "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494",
+          "size": 33177
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.gdbm.txt",
+          "audit_file": "metadata-007-LICENSE.gdbm.txt",
+          "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17",
+          "size": 35069
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libX11.txt",
+          "audit_file": "metadata-008-LICENSE.libX11.txt",
+          "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e",
+          "size": 47018
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libXau.txt",
+          "audit_file": "metadata-009-LICENSE.libXau.txt",
+          "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa",
+          "size": 1148
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libedit.txt",
+          "audit_file": "metadata-010-LICENSE.libedit.txt",
+          "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1",
+          "size": 1614
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libffi.txt",
+          "audit_file": "metadata-011-LICENSE.libffi.txt",
+          "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5",
+          "size": 1132
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.liblzma.txt",
+          "audit_file": "metadata-012-LICENSE.liblzma.txt",
+          "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca",
+          "size": 33
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libressl.txt",
+          "audit_file": "metadata-013-LICENSE.libressl.txt",
+          "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106",
+          "size": 6491
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libuuid.txt",
+          "audit_file": "metadata-014-LICENSE.libuuid.txt",
+          "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b",
+          "size": 1432
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.libxcb.txt",
+          "audit_file": "metadata-015-LICENSE.libxcb.txt",
+          "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd",
+          "size": 1337
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.ncurses.txt",
+          "audit_file": "metadata-016-LICENSE.ncurses.txt",
+          "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca",
+          "size": 1333
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.openssl.txt",
+          "audit_file": "metadata-017-LICENSE.openssl.txt",
+          "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560",
+          "size": 6120
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.readline.txt",
+          "audit_file": "metadata-018-LICENSE.readline.txt",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "size": 35147
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.sqlite.txt",
+          "audit_file": "metadata-019-LICENSE.sqlite.txt",
+          "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719",
+          "size": 1481
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tcl.txt",
+          "audit_file": "metadata-020-LICENSE.tcl.txt",
+          "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16",
+          "size": 2255
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.tix.txt",
+          "audit_file": "metadata-021-LICENSE.tix.txt",
+          "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5",
+          "size": 2826
+        },
+        {
+          "archive_path": "python/licenses/LICENSE.zlib.txt",
+          "audit_file": "metadata-022-LICENSE.zlib.txt",
+          "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c",
+          "size": 995
+        }
+      ]
+    }
+  ]
+}

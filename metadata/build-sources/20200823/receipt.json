@@ -1,0 +1,784 @@
+{
+  "repository": "https://github.com/astral-sh/python-build-standalone",
+  "tag": "20200823",
+  "revision": "51a442d1ce41298e3007daf1c8ff334ea91576a2",
+  "source_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+  "source_sha256": "504ea02973795b97fdf03d4360ba7988ce86f77449656fd450ba334547b56260",
+  "source_sha256_origin": "computed after official HTTPS intake; not a publisher signature",
+  "archive": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+  "size": 162232,
+  "members": [
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "size": 0,
+      "type": "5"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/.editorconfig",
+      "size": 67,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/.gitignore",
+      "size": 52,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/.hgignore",
+      "size": 19,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE",
+      "size": 1495,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.bdb.txt",
+      "size": 7293,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.bzip2.txt",
+      "size": 1743,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.cpython.txt",
+      "size": 33177,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.gdbm.txt",
+      "size": 35069,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libX11.txt",
+      "size": 47018,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libXau.txt",
+      "size": 1148,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libedit.txt",
+      "size": 1614,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libffi.txt",
+      "size": 1132,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.liblzma.txt",
+      "size": 33,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libressl.txt",
+      "size": 6491,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libuuid.txt",
+      "size": 1432,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.libxcb.txt",
+      "size": 1337,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.ncurses.txt",
+      "size": 1333,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.openssl.txt",
+      "size": 6120,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.readline.txt",
+      "size": 35147,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.sqlite.txt",
+      "size": 1481,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.tcl.txt",
+      "size": 2255,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.tix.txt",
+      "size": 2826,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE.zlib.txt",
+      "size": 995,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/README.rst",
+      "size": 164,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/build-linux.py",
+      "size": 1404,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/build-macos.py",
+      "size": 1404,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/build-windows.py",
+      "size": 1481,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix",
+      "size": 0,
+      "type": "5"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/Makefile",
+      "size": 10378,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/base.Dockerfile",
+      "size": 994,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-bdb.sh",
+      "size": 681,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-binutils.sh",
+      "size": 569,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-bzip2.sh",
+      "size": 696,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-clang-linux64.sh",
+      "size": 6679,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-clang-macos.sh",
+      "size": 1822,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-cpython.sh",
+      "size": 20802,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gcc.sh",
+      "size": 1015,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gdbm.sh",
+      "size": 783,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gettext.sh",
+      "size": 1331,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-inputproto.sh",
+      "size": 575,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-kbproto.sh",
+      "size": 563,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libX11.sh",
+      "size": 1409,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libXau.sh",
+      "size": 659,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libedit.sh",
+      "size": 3633,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libffi.sh",
+      "size": 657,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libpthread-stubs.sh",
+      "size": 599,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libressl.sh",
+      "size": 674,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libxcb.sh",
+      "size": 659,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-main.py",
+      "size": 3296,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-musl.sh",
+      "size": 508,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-ncurses.sh",
+      "size": 638,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-openssl.sh",
+      "size": 1063,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-readline.sh",
+      "size": 715,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-sqlite.sh",
+      "size": 568,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tcl.sh",
+      "size": 1636,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tix.sh",
+      "size": 1589,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tk.sh",
+      "size": 4863,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-uuid.sh",
+      "size": 548,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-x11-util-macros.sh",
+      "size": 499,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xcb-proto.sh",
+      "size": 571,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xextproto.sh",
+      "size": 571,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xorgproto.sh",
+      "size": 571,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xproto.sh",
+      "size": 590,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xtrans.sh",
+      "size": 559,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xz.sh",
+      "size": 763,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-zlib.sh",
+      "size": 496,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build.Dockerfile",
+      "size": 182,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build.py",
+      "size": 34913,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/clang.Dockerfile",
+      "size": 147,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/disabled-static-modules.3.7.linux64",
+      "size": 0,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/disabled-static-modules.3.7.macos",
+      "size": 151,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/disabled-static-modules.3.8.linux64",
+      "size": 0,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/disabled-static-modules.3.8.macos",
+      "size": 151,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/gcc.Dockerfile",
+      "size": 258,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/required-extensions.3.7.linux64",
+      "size": 69,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/required-extensions.3.7.macos",
+      "size": 69,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/required-extensions.3.8.linux64",
+      "size": 69,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/required-extensions.3.8.macos",
+      "size": 69,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/rust.Dockerfile",
+      "size": 142,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/static-modules.3.7.linux64",
+      "size": 3159,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/static-modules.3.7.macos",
+      "size": 2510,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/static-modules.3.8.linux64",
+      "size": 3233,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/static-modules.3.8.macos",
+      "size": 2579,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/xcb.Dockerfile",
+      "size": 66,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-windows",
+      "size": 0,
+      "type": "5"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-windows/build.py",
+      "size": 77968,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-windows/generate_metadata.py",
+      "size": 1406,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs",
+      "size": 0,
+      "type": "5"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/Makefile",
+      "size": 634,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/building.rst",
+      "size": 2596,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/conf.py",
+      "size": 289,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/distributions.rst",
+      "size": 15716,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/index.rst",
+      "size": 1245,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/quirks.rst",
+      "size": 2882,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/running.rst",
+      "size": 3929,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/status.rst",
+      "size": 12172,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/technotes.rst",
+      "size": 6113,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/python-licenses.rst",
+      "size": 105875,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild",
+      "size": 0,
+      "type": "5"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/__init__.py",
+      "size": 0,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/buildenv.py",
+      "size": 7670,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/cpython.py",
+      "size": 11241,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/docker.py",
+      "size": 4282,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/downloads.py",
+      "size": 16945,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/logging.py",
+      "size": 695,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/utils.py",
+      "size": 6992,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/verify_distribution.py",
+      "size": 2854,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/release-linux.sh",
+      "size": 1193,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/release-macos.sh",
+      "size": 529,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/requirements.txt",
+      "size": 12088,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/requirements.txt.in",
+      "size": 34,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/requirements.win.txt",
+      "size": 13549,
+      "type": "0"
+    },
+    {
+      "name": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/test-distribution.py",
+      "size": 1306,
+      "type": "0"
+    }
+  ],
+  "audit_files": [
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/LICENSE",
+      "audit_file": "000-LICENSE",
+      "sha256": "02e7aaf3645b50fb9056b18528e2ca3474a6628fe3396ae4dd326f6618e0aad7"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/README.rst",
+      "audit_file": "001-README.rst",
+      "sha256": "7fbc9e4efcd1b06b712c91ae202e77107fc3cfaabf1ad076d94da967e3f35832"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-bdb.sh",
+      "audit_file": "002-build-bdb.sh",
+      "sha256": "3ffa1097512d4f6a7b01eb5194fa49485e1cc93280f321ed3f81ba64786f3d86"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-binutils.sh",
+      "audit_file": "003-build-binutils.sh",
+      "sha256": "2c2268b70d552291664dd98bddf98e19840b2fbe834f388d48e75bc96a40e057"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-bzip2.sh",
+      "audit_file": "004-build-bzip2.sh",
+      "sha256": "8f5aa137347b772c541828d8756f303e3b1b8c498291e4ba3657b0520f872a3f"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-clang-linux64.sh",
+      "audit_file": "005-build-clang-linux64.sh",
+      "sha256": "dd6da78aa75f6c13c9891e599f2822328119d5a1303acde4a9db6897fc0cbeb0"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-clang-macos.sh",
+      "audit_file": "006-build-clang-macos.sh",
+      "sha256": "eaf25173c7f20d6fe4e2fa5778eaacfc6accb6d31001ce94d5e281288fab9a19"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-cpython.sh",
+      "audit_file": "007-build-cpython.sh",
+      "sha256": "a76b7527d645c397a27d0eba470487b5aea6dcabbc7b44baa58ebac60979d7b5"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gcc.sh",
+      "audit_file": "008-build-gcc.sh",
+      "sha256": "a78f5e813ae671f4e8ea1b339c5b8943f6aea805544d9ad747fe35594cc0b184"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gdbm.sh",
+      "audit_file": "009-build-gdbm.sh",
+      "sha256": "463e7e75e840ce3065c8049868f31597e23db64df6bdee8881b6ed97a4a2ae10"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-gettext.sh",
+      "audit_file": "010-build-gettext.sh",
+      "sha256": "1195d7ce8300bcc6c40099f6cab70d8e3e7365d2b28031dd10d919c132771d2b"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-inputproto.sh",
+      "audit_file": "011-build-inputproto.sh",
+      "sha256": "a904d76ad8018b079cfeb70eef77d86dfa8cc7e6929ec521d071f41393fac9d2"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-kbproto.sh",
+      "audit_file": "012-build-kbproto.sh",
+      "sha256": "0b378f758db5533bd9415271a1617b709d7a1ede88ccf6428ec74b599c389b4b"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libX11.sh",
+      "audit_file": "013-build-libX11.sh",
+      "sha256": "954d4cc3654227f3a1d7250607cfef064f10ec776b934e1fe2b38d1c01ebbc29"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libXau.sh",
+      "audit_file": "014-build-libXau.sh",
+      "sha256": "1e5c33f369412264c3f6883a69275f9a4a185a666a8cf73f3c17fef9b03c2d91"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libedit.sh",
+      "audit_file": "015-build-libedit.sh",
+      "sha256": "03f24901732d4bc468815c1c3dc6208b8d4b006c663fcd8d491e092237183527"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libffi.sh",
+      "audit_file": "016-build-libffi.sh",
+      "sha256": "49648c351f9b76a10d1b6fd29aa6e772c60ee36531890393dc0fe21fdc470ade"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libpthread-stubs.sh",
+      "audit_file": "017-build-libpthread-stubs.sh",
+      "sha256": "cb2991bf877a1aa3a61afa34328d744fb149e8b188363586dcb2973b2f729d03"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libressl.sh",
+      "audit_file": "018-build-libressl.sh",
+      "sha256": "02b7ad68866c58d2f1dc1647265d152ad21d3705f2ae196542b280a0878d2699"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-libxcb.sh",
+      "audit_file": "019-build-libxcb.sh",
+      "sha256": "1b172890378fe38ec6e5e8dca66da853994d9eb58ec7a0d6e845586e5c74c95b"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-musl.sh",
+      "audit_file": "020-build-musl.sh",
+      "sha256": "601d2447bdf9b55366132234c841454e6dd5281612aea9cb7c511eb103939c53"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-ncurses.sh",
+      "audit_file": "021-build-ncurses.sh",
+      "sha256": "f3d005d4e95a90306a668adb60fed9a068c2597ae31d6883eef9858d66cf67c6"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-openssl.sh",
+      "audit_file": "022-build-openssl.sh",
+      "sha256": "af919a1e152cd4be97594cc556ad534aceebe93a96477e3067fd457d440b36b0"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-readline.sh",
+      "audit_file": "023-build-readline.sh",
+      "sha256": "4a456959382dc0d233fb78db2abd1511df5f7597959cc8e51a2256eed581ab52"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-sqlite.sh",
+      "audit_file": "024-build-sqlite.sh",
+      "sha256": "2780731a3702b76a8da3ba036a6885cd7cbbcd20dff2ecfac4faf580a6bec54f"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tcl.sh",
+      "audit_file": "025-build-tcl.sh",
+      "sha256": "2258e4ce8b397cd4839c366e82d937e27ed9204662124f6cfba0c769fe3c68cf"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tix.sh",
+      "audit_file": "026-build-tix.sh",
+      "sha256": "ba09c41b487eea534c7b4451fae7fbcacf651941a2c2449f34c1ca7999f3752b"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-tk.sh",
+      "audit_file": "027-build-tk.sh",
+      "sha256": "3dae67a1baadc4af76604ff81b0fadb6d89e20ef82046fb59d91979f457615c6"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-uuid.sh",
+      "audit_file": "028-build-uuid.sh",
+      "sha256": "583cec6be66e970925f3061f8b6b39768766de0d07380ce9f73fb4023780f3a0"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-x11-util-macros.sh",
+      "audit_file": "029-build-x11-util-macros.sh",
+      "sha256": "126fd6c389a84b8b93073bf1a962455d60f527edda28be5ceb22c68f1256c9cf"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xcb-proto.sh",
+      "audit_file": "030-build-xcb-proto.sh",
+      "sha256": "87115ef5723477a7f5fc130fbff36b2fedbc1e984b891f624af596ea6262baa3"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xextproto.sh",
+      "audit_file": "031-build-xextproto.sh",
+      "sha256": "8d5e403a8d80c69c0256579484f949da8e0f34d65e0fd8fe49623b6a4c138548"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xorgproto.sh",
+      "audit_file": "032-build-xorgproto.sh",
+      "sha256": "0ee65c9f4f7c6ce3e37acfb324ae16d11e04497e644d3519c893019f11efa420"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xproto.sh",
+      "audit_file": "033-build-xproto.sh",
+      "sha256": "b40e264400a2c4f9d627704e4536f2ad92f97e30288f9463bdf290a2bd4ee3b0"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xtrans.sh",
+      "audit_file": "034-build-xtrans.sh",
+      "sha256": "78dd05c6456cd451e191ac0251853d30c65ee63528b2891049391317829deb23"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-xz.sh",
+      "audit_file": "035-build-xz.sh",
+      "sha256": "3ec5c314b8436bde3b51d73b9c64674a955a2549a317d8fb79e7efe580f9437d"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/cpython-unix/build-zlib.sh",
+      "audit_file": "036-build-zlib.sh",
+      "sha256": "623ff955efee752e40b3e4bfd09661d8eddc1eae02f6c78ff5196f6e0708e474"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/pythonbuild/downloads.py",
+      "audit_file": "037-downloads.py",
+      "sha256": "ed80fc0e47955e1e14ede1b26143bf6de591121cf79b9a77ae63ca8d492466d5"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/release-linux.sh",
+      "audit_file": "038-release-linux.sh",
+      "sha256": "3fc665e7a8a98d331869f917de2d170b9a10fa13beb68773a2e4db4d8fe3b0dc"
+    },
+    {
+      "source_path": "python-build-standalone-51a442d1ce41298e3007daf1c8ff334ea91576a2/release-macos.sh",
+      "audit_file": "039-release-macos.sh",
+      "sha256": "35ecaada3082e180d8704ff6c535b76036afbd4a9f9890e7d27e2c1eb2d2be14"
+    }
+  ]
+}

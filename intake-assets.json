@@ -1,0 +1,968 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/vx-org/python",
+  "tag": "python-3.7.9-pbs-20200823",
+  "publication_status": "prepared-locally-not-published",
+  "release_purpose": "Verified historical acquisition intake; native Rez releases and installed VX consumer acceptance remain separate gates.",
+  "asset_count": 27,
+  "total_size": 216836724,
+  "assets": [
+    {
+      "name": "bdb-db-6.0.19.tar.gz",
+      "url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+      "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+      "size": 36541923
+    },
+    {
+      "name": "bzip2-bzip2-1.0.8.tar.gz",
+      "url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "size": 810029
+    },
+    {
+      "name": "cpython-3.7-Python-3.7.9.tar.xz",
+      "url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+      "sha256": "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01",
+      "size": 17389636
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8",
+      "size": 26136896
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89",
+      "size": 31429615
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543",
+      "size": 28357634
+    },
+    {
+      "name": "gettext-gettext-0.21.tar.gz",
+      "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+      "sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12",
+      "size": 24181849
+    },
+    {
+      "name": "libedit-libedit-20191231-3.1.tar.gz",
+      "url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+      "sha256": "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071",
+      "size": 516801
+    },
+    {
+      "name": "libffi-libffi-3.3.tar.gz",
+      "url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+      "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+      "size": 1305466
+    },
+    {
+      "name": "libressl-libressl-3.1.4.tar.gz",
+      "url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+      "sha256": "414c149c9963983f805a081db5bd3aec146b5f82d529bb63875ac941b25dcbb6",
+      "size": 3767238
+    },
+    {
+      "name": "libX11-libX11-1.6.8.tar.gz",
+      "url": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+      "sha256": "69d1a27cba722dca897198a23fa8d3cad3ec0c715e00205ea4398ec68a4258a5",
+      "size": 3144482
+    },
+    {
+      "name": "libXau-libXau-1.0.7.tar.gz",
+      "url": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+      "sha256": "cbb81b4ba0f585faac8b9914b0bdbef6e0ef886a30c70d6584e2b30efeda9ac4",
+      "size": 349278
+    },
+    {
+      "name": "libxcb-libxcb-1.13.1.tar.gz",
+      "url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+      "sha256": "f09a76971437780a602303170fd51b5f7474051722bc39d566a272d2c4bde1b5",
+      "size": 636748
+    },
+    {
+      "name": "ncurses-ncurses-6.2.tar.gz",
+      "url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+      "sha256": "30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d",
+      "size": 3425862
+    },
+    {
+      "name": "openssl-openssl-1.1.1g.tar.gz",
+      "url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+      "sha256": "ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46",
+      "size": 9801502
+    },
+    {
+      "name": "pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+      "url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "sha256": "e8a54a9831e2ac02e4926d0ec02818d8d9ead039dec34180df6a35b813f2d8ce",
+      "size": 161533
+    },
+    {
+      "name": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+      "url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "sha256": "504ea02973795b97fdf03d4360ba7988ce86f77449656fd450ba334547b56260",
+      "size": 162232
+    },
+    {
+      "name": "pip-pip-20.2.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+      "sha256": "58a3b0b55ee2278104165c7ee7bc8e2db6f635067f3c66cf637113ec5aa71584",
+      "size": 1496965
+    },
+    {
+      "name": "readline-readline-8.0.tar.gz",
+      "url": "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+      "sha256": "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461",
+      "size": 2975937
+    },
+    {
+      "name": "setuptools-setuptools-49.6.0.zip",
+      "url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+      "sha256": "46bd862894ed22c2edff033c758c2dc026324788d758e96788e8f7c11f4e9707",
+      "size": 2188590
+    },
+    {
+      "name": "sqlite-sqlite-autoconf-3330000.tar.gz",
+      "url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+      "sha256": "106a2c48c7f75a298a7557bcc0d5f4f454e5b43811cc738b7ca294d6956bbb15",
+      "size": 2913759
+    },
+    {
+      "name": "tcl-tcl8.6.10-src.tar.gz",
+      "url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+      "sha256": "5196dbf6638e3df8d5c87b5815c8c2b758496eb6f0e41446596c9a4e638d87ed",
+      "size": 10144235
+    },
+    {
+      "name": "tix-tix-8.4.3.6.tar.gz",
+      "url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+      "sha256": "f7b21d115867a41ae5fd7c635a4c234d3ca25126c3661eb36028c6e25601f85e",
+      "size": 1836451
+    },
+    {
+      "name": "tk-tk8.6.10-src.tar.gz",
+      "url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+      "sha256": "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386",
+      "size": 4444764
+    },
+    {
+      "name": "uuid-libuuid-1.0.3.tar.gz",
+      "url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+      "sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+      "size": 318256
+    },
+    {
+      "name": "xz-xz-5.2.5.tar.gz",
+      "url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+      "sha256": "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10",
+      "size": 1791345
+    },
+    {
+      "name": "zlib-zlib-1.2.11.tar.gz",
+      "url": "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+      "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+      "size": 607698
+    }
+  ],
+  "origins": [
+    {
+      "name": "bdb-db-6.0.19.tar.gz",
+      "kind": "component-source",
+      "component": "bdb",
+      "version": "6.0.19",
+      "original_url": "https://ftp.tw.freebsd.org/distfiles/bdb/db-6.0.19.tar.gz",
+      "requested_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+      "final_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "bdb",
+        "version": "6.0.19",
+        "original_url": "https://ftp.tw.freebsd.org/distfiles/bdb/db-6.0.19.tar.gz",
+        "requested_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+        "archive": "bdb-db-6.0.19.tar.gz",
+        "expected_sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+        "expected_size": 36541923,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+        "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+        "size": 36541923
+      }
+    },
+    {
+      "name": "bzip2-bzip2-1.0.8.tar.gz",
+      "kind": "component-source",
+      "component": "bzip2",
+      "version": "1.0.8",
+      "original_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "requested_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "final_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "bzip2",
+        "version": "1.0.8",
+        "original_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+        "requested_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+        "archive": "bzip2-bzip2-1.0.8.tar.gz",
+        "expected_sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+        "expected_size": 810029,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+        "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+        "size": 810029
+      }
+    },
+    {
+      "name": "cpython-3.7-Python-3.7.9.tar.xz",
+      "kind": "component-source",
+      "component": "cpython-3.7",
+      "version": "3.7.9",
+      "original_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+      "requested_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+      "final_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "cpython-3.7",
+        "version": "3.7.9",
+        "original_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+        "requested_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+        "archive": "cpython-3.7-Python-3.7.9.tar.xz",
+        "expected_sha256": "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01",
+        "expected_size": 17389636,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+        "sha256": "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01",
+        "size": 17389636
+      }
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "kind": "original-runtime",
+      "target": "x86_64-apple-darwin",
+      "original_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "requested_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "github_asset_id": 24211674,
+      "release_tag": "20200823",
+      "digest_origin": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+      "publisher_digest": null,
+      "intake_integrity": {
+        "cross_checks": [
+          "Official GitHub Release asset IDs, filenames and sizes matched the downloaded archives.",
+          "PyOxidizer b6e940361506e7dcb3b545baf181f213c8888cc6 pins Python 3.8.5 from the same releases, but supplies no independent SHA256 for these 3.7.9 assets."
+        ],
+        "method": "official-tls-intake",
+        "observed_on": "2026-10-09",
+        "publisher_digest": null,
+        "statement": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+        "upstream_digest_observation": "GitHub Release asset digest fields are null. The historical release has no checksum assets."
+      }
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "kind": "original-runtime",
+      "target": "x86_64-pc-windows-msvc",
+      "original_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "requested_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "github_asset_id": 24195911,
+      "release_tag": "20200822",
+      "digest_origin": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+      "publisher_digest": null,
+      "intake_integrity": {
+        "cross_checks": [
+          "Official GitHub Release asset IDs, filenames and sizes matched the downloaded archives.",
+          "PyOxidizer b6e940361506e7dcb3b545baf181f213c8888cc6 pins Python 3.8.5 from the same releases, but supplies no independent SHA256 for these 3.7.9 assets."
+        ],
+        "method": "official-tls-intake",
+        "observed_on": "2026-10-09",
+        "publisher_digest": null,
+        "statement": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+        "upstream_digest_observation": "GitHub Release asset digest fields are null. The historical release has no checksum assets."
+      }
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "kind": "original-runtime",
+      "target": "x86_64-unknown-linux-gnu",
+      "original_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "requested_url": "https://github.com/astral-sh/python-build-standalone/releases/download/20200822/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "github_asset_id": 24195897,
+      "release_tag": "20200822",
+      "digest_origin": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+      "publisher_digest": null,
+      "intake_integrity": {
+        "cross_checks": [
+          "Official GitHub Release asset IDs, filenames and sizes matched the downloaded archives.",
+          "PyOxidizer b6e940361506e7dcb3b545baf181f213c8888cc6 pins Python 3.8.5 from the same releases, but supplies no independent SHA256 for these 3.7.9 assets."
+        ],
+        "method": "official-tls-intake",
+        "observed_on": "2026-10-09",
+        "publisher_digest": null,
+        "statement": "SHA256 computed after HTTPS acquisition from official GitHub Releases; this establishes a reviewable trust bootstrap, not a publisher checksum or signature.",
+        "upstream_digest_observation": "GitHub Release asset digest fields are null. The historical release has no checksum assets."
+      }
+    },
+    {
+      "name": "gettext-gettext-0.21.tar.gz",
+      "kind": "component-source",
+      "component": "gettext",
+      "version": "0.21",
+      "original_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+      "requested_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+      "final_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "gettext",
+        "version": "0.21",
+        "original_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+        "requested_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+        "archive": "gettext-gettext-0.21.tar.gz",
+        "expected_sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12",
+        "expected_size": 24181849,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+        "sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12",
+        "size": 24181849
+      }
+    },
+    {
+      "name": "libedit-libedit-20191231-3.1.tar.gz",
+      "kind": "component-source",
+      "component": "libedit",
+      "version": "20191231-3.1",
+      "original_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+      "requested_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+      "final_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libedit",
+        "version": "20191231-3.1",
+        "original_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+        "requested_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+        "archive": "libedit-libedit-20191231-3.1.tar.gz",
+        "expected_sha256": "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071",
+        "expected_size": 516801,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+        "sha256": "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071",
+        "size": 516801
+      }
+    },
+    {
+      "name": "libffi-libffi-3.3.tar.gz",
+      "kind": "component-source",
+      "component": "libffi",
+      "version": "3.3",
+      "original_url": "ftp://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+      "requested_url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+      "final_url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libffi",
+        "version": "3.3",
+        "original_url": "ftp://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+        "requested_url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+        "archive": "libffi-libffi-3.3.tar.gz",
+        "expected_sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+        "expected_size": 1305466,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+        "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+        "size": 1305466
+      }
+    },
+    {
+      "name": "libressl-libressl-3.1.4.tar.gz",
+      "kind": "component-source",
+      "component": "libressl",
+      "version": "3.1.4",
+      "original_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+      "requested_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+      "final_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libressl",
+        "version": "3.1.4",
+        "original_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+        "requested_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+        "archive": "libressl-libressl-3.1.4.tar.gz",
+        "expected_sha256": "414c149c9963983f805a081db5bd3aec146b5f82d529bb63875ac941b25dcbb6",
+        "expected_size": 3767238,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+        "sha256": "414c149c9963983f805a081db5bd3aec146b5f82d529bb63875ac941b25dcbb6",
+        "size": 3767238
+      }
+    },
+    {
+      "name": "libX11-libX11-1.6.8.tar.gz",
+      "kind": "component-source",
+      "component": "libX11",
+      "version": "1.6.8",
+      "original_url": "ftp://mirror.csclub.uwaterloo.ca/x.org/pub/current/src/lib/libX11-1.6.8.tar.gz",
+      "requested_url": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+      "final_url": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libX11",
+        "version": "1.6.8",
+        "original_url": "ftp://mirror.csclub.uwaterloo.ca/x.org/pub/current/src/lib/libX11-1.6.8.tar.gz",
+        "requested_url": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+        "archive": "libX11-libX11-1.6.8.tar.gz",
+        "expected_sha256": "69d1a27cba722dca897198a23fa8d3cad3ec0c715e00205ea4398ec68a4258a5",
+        "expected_size": 3144482,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+        "sha256": "69d1a27cba722dca897198a23fa8d3cad3ec0c715e00205ea4398ec68a4258a5",
+        "size": 3144482
+      }
+    },
+    {
+      "name": "libXau-libXau-1.0.7.tar.gz",
+      "kind": "component-source",
+      "component": "libXau",
+      "version": "1.0.7",
+      "original_url": "https://www.x.org/releases/individual/lib/libXau-1.0.7.tar.gz",
+      "requested_url": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+      "final_url": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libXau",
+        "version": "1.0.7",
+        "original_url": "https://www.x.org/releases/individual/lib/libXau-1.0.7.tar.gz",
+        "requested_url": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+        "archive": "libXau-libXau-1.0.7.tar.gz",
+        "expected_sha256": "cbb81b4ba0f585faac8b9914b0bdbef6e0ef886a30c70d6584e2b30efeda9ac4",
+        "expected_size": 349278,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+        "sha256": "cbb81b4ba0f585faac8b9914b0bdbef6e0ef886a30c70d6584e2b30efeda9ac4",
+        "size": 349278
+      }
+    },
+    {
+      "name": "libxcb-libxcb-1.13.1.tar.gz",
+      "kind": "component-source",
+      "component": "libxcb",
+      "version": "1.13.1",
+      "original_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+      "requested_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+      "final_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "libxcb",
+        "version": "1.13.1",
+        "original_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+        "requested_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+        "archive": "libxcb-libxcb-1.13.1.tar.gz",
+        "expected_sha256": "f09a76971437780a602303170fd51b5f7474051722bc39d566a272d2c4bde1b5",
+        "expected_size": 636748,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+        "sha256": "f09a76971437780a602303170fd51b5f7474051722bc39d566a272d2c4bde1b5",
+        "size": 636748
+      }
+    },
+    {
+      "name": "ncurses-ncurses-6.2.tar.gz",
+      "kind": "component-source",
+      "component": "ncurses",
+      "version": "6.2",
+      "original_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+      "requested_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+      "final_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "ncurses",
+        "version": "6.2",
+        "original_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+        "requested_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+        "archive": "ncurses-ncurses-6.2.tar.gz",
+        "expected_sha256": "30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d",
+        "expected_size": 3425862,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+        "sha256": "30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d",
+        "size": 3425862
+      }
+    },
+    {
+      "name": "openssl-openssl-1.1.1g.tar.gz",
+      "kind": "component-source",
+      "component": "openssl",
+      "version": "1.1.1g",
+      "original_url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+      "requested_url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+      "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/7634677/146fc94b-89eb-439b-95da-1d4758628436",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "openssl",
+        "version": "1.1.1g",
+        "original_url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+        "requested_url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+        "archive": "openssl-openssl-1.1.1g.tar.gz",
+        "expected_sha256": "ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46",
+        "expected_size": 9801502,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://release-assets.githubusercontent.com/github-production-release-asset/7634677/146fc94b-89eb-439b-95da-1d4758628436",
+        "sha256": "ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46",
+        "size": 9801502,
+        "final_url_query_omitted": "Temporary redirect parameters omitted; original acquisition receipt retained locally."
+      }
+    },
+    {
+      "name": "pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+      "kind": "build-recipe",
+      "repository": "https://github.com/astral-sh/python-build-standalone",
+      "tag": "20200822",
+      "revision": "3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "original_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "requested_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "digest_origin": "computed after official HTTPS intake; not a publisher signature"
+    },
+    {
+      "name": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+      "kind": "build-recipe",
+      "repository": "https://github.com/astral-sh/python-build-standalone",
+      "tag": "20200823",
+      "revision": "51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "original_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "requested_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "digest_origin": "computed after official HTTPS intake; not a publisher signature"
+    },
+    {
+      "name": "pip-pip-20.2.2.tar.gz",
+      "kind": "component-source",
+      "component": "pip",
+      "version": "20.2.2",
+      "original_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+      "requested_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+      "final_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "pip",
+        "version": "20.2.2",
+        "original_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+        "requested_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+        "archive": "pip-pip-20.2.2.tar.gz",
+        "expected_sha256": "58a3b0b55ee2278104165c7ee7bc8e2db6f635067f3c66cf637113ec5aa71584",
+        "expected_size": 1496965,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+        "sha256": "58a3b0b55ee2278104165c7ee7bc8e2db6f635067f3c66cf637113ec5aa71584",
+        "size": 1496965
+      }
+    },
+    {
+      "name": "readline-readline-8.0.tar.gz",
+      "kind": "component-source",
+      "component": "readline",
+      "version": "8.0",
+      "original_url": "ftp://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+      "requested_url": "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+      "final_url": "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "readline",
+        "version": "8.0",
+        "original_url": "ftp://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+        "requested_url": "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+        "archive": "readline-readline-8.0.tar.gz",
+        "expected_sha256": "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461",
+        "expected_size": 2975937,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+        "sha256": "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461",
+        "size": 2975937
+      }
+    },
+    {
+      "name": "setuptools-setuptools-49.6.0.zip",
+      "kind": "component-source",
+      "component": "setuptools",
+      "version": "49.6.0",
+      "original_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+      "requested_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+      "final_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "setuptools",
+        "version": "49.6.0",
+        "original_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+        "requested_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+        "archive": "setuptools-setuptools-49.6.0.zip",
+        "expected_sha256": "46bd862894ed22c2edff033c758c2dc026324788d758e96788e8f7c11f4e9707",
+        "expected_size": 2188590,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+        "sha256": "46bd862894ed22c2edff033c758c2dc026324788d758e96788e8f7c11f4e9707",
+        "size": 2188590
+      }
+    },
+    {
+      "name": "sqlite-sqlite-autoconf-3330000.tar.gz",
+      "kind": "component-source",
+      "component": "sqlite",
+      "version": "3330000",
+      "original_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+      "requested_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+      "final_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "sqlite",
+        "version": "3330000",
+        "original_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+        "requested_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+        "archive": "sqlite-sqlite-autoconf-3330000.tar.gz",
+        "expected_sha256": "106a2c48c7f75a298a7557bcc0d5f4f454e5b43811cc738b7ca294d6956bbb15",
+        "expected_size": 2913759,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+        "sha256": "106a2c48c7f75a298a7557bcc0d5f4f454e5b43811cc738b7ca294d6956bbb15",
+        "size": 2913759
+      }
+    },
+    {
+      "name": "tcl-tcl8.6.10-src.tar.gz",
+      "kind": "component-source",
+      "component": "tcl",
+      "version": "8.6.10",
+      "original_url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+      "requested_url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+      "final_url": "https://zenlayer.dl.sourceforge.net/project/tcl/Tcl/8.6.10/tcl8.6.10-src.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "tcl",
+        "version": "8.6.10",
+        "original_url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+        "requested_url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+        "archive": "tcl-tcl8.6.10-src.tar.gz",
+        "expected_sha256": "5196dbf6638e3df8d5c87b5815c8c2b758496eb6f0e41446596c9a4e638d87ed",
+        "expected_size": 10144235,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://zenlayer.dl.sourceforge.net/project/tcl/Tcl/8.6.10/tcl8.6.10-src.tar.gz",
+        "sha256": "5196dbf6638e3df8d5c87b5815c8c2b758496eb6f0e41446596c9a4e638d87ed",
+        "size": 10144235,
+        "final_url_query_omitted": "Temporary redirect parameters omitted; original acquisition receipt retained locally."
+      }
+    },
+    {
+      "name": "tix-tix-8.4.3.6.tar.gz",
+      "kind": "component-source",
+      "component": "tix",
+      "version": "8.4.3.6",
+      "original_url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+      "requested_url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+      "final_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/tix-8.4.3.6",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "tix",
+        "version": "8.4.3.6",
+        "original_url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+        "requested_url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+        "archive": "tix-tix-8.4.3.6.tar.gz",
+        "expected_sha256": "f7b21d115867a41ae5fd7c635a4c234d3ca25126c3661eb36028c6e25601f85e",
+        "expected_size": 1836451,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://codeload.github.com/python/cpython-source-deps/tar.gz/refs/tags/tix-8.4.3.6",
+        "sha256": "f7b21d115867a41ae5fd7c635a4c234d3ca25126c3661eb36028c6e25601f85e",
+        "size": 1836451
+      }
+    },
+    {
+      "name": "tk-tk8.6.10-src.tar.gz",
+      "kind": "component-source",
+      "component": "tk",
+      "version": "8.6.10",
+      "original_url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+      "requested_url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+      "final_url": "https://zenlayer.dl.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "tk",
+        "version": "8.6.10",
+        "original_url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+        "requested_url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+        "archive": "tk-tk8.6.10-src.tar.gz",
+        "expected_sha256": "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386",
+        "expected_size": 4444764,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://zenlayer.dl.sourceforge.net/project/tcl/Tcl/8.6.10/tk8.6.10-src.tar.gz",
+        "sha256": "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386",
+        "size": 4444764,
+        "final_url_query_omitted": "Temporary redirect parameters omitted; original acquisition receipt retained locally."
+      }
+    },
+    {
+      "name": "uuid-libuuid-1.0.3.tar.gz",
+      "kind": "component-source",
+      "component": "uuid",
+      "version": "1.0.3",
+      "original_url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+      "requested_url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+      "final_url": "https://zenlayer.dl.sourceforge.net/project/libuuid/libuuid-1.0.3.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "uuid",
+        "version": "1.0.3",
+        "original_url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+        "requested_url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+        "archive": "uuid-libuuid-1.0.3.tar.gz",
+        "expected_sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+        "expected_size": 318256,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://zenlayer.dl.sourceforge.net/project/libuuid/libuuid-1.0.3.tar.gz",
+        "sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+        "size": 318256,
+        "final_url_query_omitted": "Temporary redirect parameters omitted; original acquisition receipt retained locally."
+      }
+    },
+    {
+      "name": "xz-xz-5.2.5.tar.gz",
+      "kind": "component-source",
+      "component": "xz",
+      "version": "5.2.5",
+      "original_url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+      "requested_url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+      "final_url": "https://twds.dl.sourceforge.net/project/lzmautils/xz-5.2.5.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "xz",
+        "version": "5.2.5",
+        "original_url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+        "requested_url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+        "archive": "xz-xz-5.2.5.tar.gz",
+        "expected_sha256": "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10",
+        "expected_size": 1791345,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://twds.dl.sourceforge.net/project/lzmautils/xz-5.2.5.tar.gz",
+        "sha256": "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10",
+        "size": 1791345,
+        "final_url_query_omitted": "Temporary redirect parameters omitted; original acquisition receipt retained locally."
+      }
+    },
+    {
+      "name": "zlib-zlib-1.2.11.tar.gz",
+      "kind": "component-source",
+      "component": "zlib",
+      "version": "1.2.11",
+      "original_url": "https://zlib.net/zlib-1.2.11.tar.gz",
+      "requested_url": "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+      "final_url": "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "acquisition_receipt": {
+        "name": "zlib",
+        "version": "1.2.11",
+        "original_url": "https://zlib.net/zlib-1.2.11.tar.gz",
+        "requested_url": "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+        "archive": "zlib-zlib-1.2.11.tar.gz",
+        "expected_sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+        "expected_size": 607698,
+        "digest_origin": "pinned historical PBS build recipe",
+        "build_tags": [
+          "20200822",
+          "20200823"
+        ],
+        "status": "verified-download",
+        "final_url": "https://zlib.net/fossils/zlib-1.2.11.tar.gz",
+        "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+        "size": 607698
+      }
+    }
+  ]
+}

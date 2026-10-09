@@ -1,0 +1,310 @@
+{
+  "status": "sources-verified-local",
+  "scope": "CPython and runtime/static libraries retained in the three original PBS archives",
+  "build_recipes": [
+    {
+      "repository": "https://github.com/astral-sh/python-build-standalone",
+      "tag": "20200822",
+      "revision": "3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "source_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "source_sha256": "e8a54a9831e2ac02e4926d0ec02818d8d9ead039dec34180df6a35b813f2d8ce",
+      "source_sha256_origin": "computed after official HTTPS intake; not a publisher signature",
+      "archive": "pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+      "size": 161533
+    },
+    {
+      "repository": "https://github.com/astral-sh/python-build-standalone",
+      "tag": "20200823",
+      "revision": "51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "source_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "source_sha256": "504ea02973795b97fdf03d4360ba7988ce86f77449656fd450ba334547b56260",
+      "source_sha256_origin": "computed after official HTTPS intake; not a publisher signature",
+      "archive": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+      "size": 162232
+    }
+  ],
+  "sources": [
+    {
+      "name": "bdb",
+      "version": "6.0.19",
+      "url": "https://ftp.tw.freebsd.org/distfiles/bdb/db-6.0.19.tar.gz",
+      "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+      "size": 36541923,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "bzip2",
+      "version": "1.0.8",
+      "url": "https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz",
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "size": 810029,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "cpython-3.7",
+      "version": "3.7.9",
+      "url": "https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tar.xz",
+      "sha256": "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01",
+      "size": 17389636,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libedit",
+      "version": "20191231-3.1",
+      "url": "https://www.thrysoee.dk/editline/libedit-20191231-3.1.tar.gz",
+      "sha256": "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071",
+      "size": 516801,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libffi",
+      "version": "3.3",
+      "url": "ftp://sourceware.org/pub/libffi/libffi-3.3.tar.gz",
+      "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+      "size": 1305466,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libressl",
+      "version": "3.1.4",
+      "url": "https://cdn.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.1.4.tar.gz",
+      "sha256": "414c149c9963983f805a081db5bd3aec146b5f82d529bb63875ac941b25dcbb6",
+      "size": 3767238,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libX11",
+      "version": "1.6.8",
+      "url": "ftp://mirror.csclub.uwaterloo.ca/x.org/pub/current/src/lib/libX11-1.6.8.tar.gz",
+      "sha256": "69d1a27cba722dca897198a23fa8d3cad3ec0c715e00205ea4398ec68a4258a5",
+      "size": 3144482,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libXau",
+      "version": "1.0.7",
+      "url": "https://www.x.org/releases/individual/lib/libXau-1.0.7.tar.gz",
+      "sha256": "cbb81b4ba0f585faac8b9914b0bdbef6e0ef886a30c70d6584e2b30efeda9ac4",
+      "size": 349278,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "libxcb",
+      "version": "1.13.1",
+      "url": "https://xcb.freedesktop.org/dist/libxcb-1.13.1.tar.gz",
+      "sha256": "f09a76971437780a602303170fd51b5f7474051722bc39d566a272d2c4bde1b5",
+      "size": 636748,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "ncurses",
+      "version": "6.2",
+      "url": "https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz",
+      "sha256": "30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d",
+      "size": 3425862,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "openssl",
+      "version": "1.1.1g",
+      "url": "https://www.openssl.org/source/openssl-1.1.1g.tar.gz",
+      "sha256": "ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46",
+      "size": 9801502,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "pip",
+      "version": "20.2.2",
+      "url": "https://files.pythonhosted.org/packages/73/8e/7774190ac616c69194688ffce7c1b2a097749792fea42e390e7ddfdef8bc/pip-20.2.2.tar.gz",
+      "sha256": "58a3b0b55ee2278104165c7ee7bc8e2db6f635067f3c66cf637113ec5aa71584",
+      "size": 1496965,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "readline",
+      "version": "8.0",
+      "url": "ftp://ftp.gnu.org/gnu/readline/readline-8.0.tar.gz",
+      "sha256": "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461",
+      "size": 2975937,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "setuptools",
+      "version": "49.6.0",
+      "url": "https://files.pythonhosted.org/packages/38/cc/db23dbe4efc464c3c0111fedf7d46de8888f05b09488d610f6f8ab6e2544/setuptools-49.6.0.zip",
+      "sha256": "46bd862894ed22c2edff033c758c2dc026324788d758e96788e8f7c11f4e9707",
+      "size": 2188590,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "sqlite",
+      "version": "3330000",
+      "url": "https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz",
+      "sha256": "106a2c48c7f75a298a7557bcc0d5f4f454e5b43811cc738b7ca294d6956bbb15",
+      "size": 2913759,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "tcl",
+      "version": "8.6.10",
+      "url": "https://prdownloads.sourceforge.net/tcl/tcl8.6.10-src.tar.gz",
+      "sha256": "5196dbf6638e3df8d5c87b5815c8c2b758496eb6f0e41446596c9a4e638d87ed",
+      "size": 10144235,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "tix",
+      "version": "8.4.3.6",
+      "url": "https://github.com/python/cpython-source-deps/archive/tix-8.4.3.6.tar.gz",
+      "sha256": "f7b21d115867a41ae5fd7c635a4c234d3ca25126c3661eb36028c6e25601f85e",
+      "size": 1836451,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "tk",
+      "version": "8.6.10",
+      "url": "https://prdownloads.sourceforge.net/tcl/tk8.6.10-src.tar.gz",
+      "sha256": "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386",
+      "size": 4444764,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "uuid",
+      "version": "1.0.3",
+      "url": "https://sourceforge.net/projects/libuuid/files/libuuid-1.0.3.tar.gz",
+      "sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+      "size": 318256,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "xz",
+      "version": "5.2.5",
+      "url": "https://tukaani.org/xz/xz-5.2.5.tar.gz",
+      "sha256": "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10",
+      "size": 1791345,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "zlib",
+      "version": "1.2.11",
+      "url": "https://zlib.net/zlib-1.2.11.tar.gz",
+      "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+      "size": 607698,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ]
+    },
+    {
+      "name": "gettext",
+      "version": "0.21",
+      "url": "https://ftp.gnu.org/pub/gnu/gettext/gettext-0.21.tar.gz",
+      "sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12",
+      "size": 24181849,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200823"
+      ]
+    }
+  ],
+  "publication_gate": "Retain required corresponding sources, build recipes, patches and notices alongside immutable runtime assets before publication.",
+  "publication_status": "not-published",
+  "publication_status_scope": "observation-at-build-time; immutable release readback is a separate receipt",
+  "retention": {
+    "expected_sources": 22,
+    "verified_sources": 22,
+    "expected_total_size": 130588814,
+    "verified_total_size": 130588814,
+    "receipt": "source-retention.json",
+    "gettext_notice_error": null
+  },
+  "license_evidence": {
+    "bdb-6.0.19": {
+      "record": "bdb-license-provenance.json",
+      "source_license_sha256": "b78815181a53241f9347c6b47d1031fd669946f863e1edc807a291354cec024b",
+      "status": "literal-source-license-retained; differing-publisher-statements-recorded",
+      "review_boundary": "This record preserves literal source terms and differing publisher statements. It does not settle their legal interpretation or guarantee redistribution rights. Licensing review is independent from byte integrity, source retention and native runtime acceptance."
+    }
+  }
+}

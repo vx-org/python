@@ -1,0 +1,28 @@
+name: Verify intake contracts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: vx-org/vx-rez-packages
+          ref: 8d54d7e1fd9f7281a20a9d40f8ef55aded2abd74
+          path: tooling
+          persist-credentials: false
+      - uses: loonghao/vx@b2c1ce558af4b516261f34a27eb0576a9bec45f1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: vx uv sync --project tooling --locked
+      - run: vx uv run --project tooling --locked python verify_intake.py --root . --tooling tooling
+      - run: vx uv run --project tooling --locked python -m unittest discover -s tests -v

@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "component": "Berkeley DB",
+  "version": "6.0.19",
+  "status": "literal-source-license-retained; differing-publisher-statements-recorded",
+  "source_archive": {
+    "name": "bdb-db-6.0.19.tar.gz",
+    "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+    "size": 36541923,
+    "digest_origin": "pinned historical PBS build recipe",
+    "acquisition": {
+      "name": "bdb",
+      "version": "6.0.19",
+      "original_url": "https://ftp.tw.freebsd.org/distfiles/bdb/db-6.0.19.tar.gz",
+      "requested_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+      "archive": "bdb-db-6.0.19.tar.gz",
+      "expected_sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+      "expected_size": 36541923,
+      "digest_origin": "pinned historical PBS build recipe",
+      "build_tags": [
+        "20200822",
+        "20200823"
+      ],
+      "status": "verified-download",
+      "final_url": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+      "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+      "size": 36541923
+    }
+  },
+  "source_license": {
+    "archive_path": "db-6.0.19/LICENSE",
+    "source": "metadata/bdb-source/LICENSE",
+    "destination": "upstream-metadata/bdb-source/LICENSE",
+    "sha256": "b78815181a53241f9347c6b47d1031fd669946f863e1edc807a291354cec024b",
+    "size": 7310
+  },
+  "literal_observations": {
+    "contains_redistribution_clause": true,
+    "contains_affero_name": false,
+    "contains_sleepycat_name": false
+  },
+  "upstream_runtime_license_comparisons": [
+    {
+      "target": "x86_64-pc-windows-msvc",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+      "size": 7293,
+      "matches_retained_source_license": false
+    },
+    {
+      "target": "x86_64-unknown-linux-gnu",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+      "size": 7293,
+      "matches_retained_source_license": false
+    },
+    {
+      "target": "x86_64-apple-darwin",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b",
+      "size": 7293,
+      "matches_retained_source_license": false
+    }
+  ],
+  "publisher_statements": [
+    {
+      "publisher": "Python Build Standalone",
+      "kind": "pinned-build-documentation",
+      "tag": "20200822",
+      "revision": "3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+      "url": "https://github.com/astral-sh/python-build-standalone/blob/3aa43064f27717808f0f2fbfc00a14ed91a00de2/docs/technotes.rst",
+      "retained_document": {
+        "source": "metadata/bdb-license-evidence/pbs-20200822-technotes.rst",
+        "destination": "upstream-metadata/bdb-license-evidence/pbs-20200822-technotes.rst",
+        "sha256": "9aa60629e20533571a7e6cb0e51ea7c43d6493ee5913b11c79644d8950297c0d",
+        "size": 6113
+      },
+      "matching_literal_lines": [
+        {
+          "line": 54,
+          "text": "NDBM, GDBM, and Berkeley DB. Both NDBM and GDBM are GNU GPL Version 3."
+        },
+        {
+          "line": 55,
+          "text": "Modern versions of Berkeley DB are GNU AGPL v3. Versions 6.0.19 and"
+        },
+        {
+          "line": 56,
+          "text": "older are licensed under the Sleepycat License. The Sleepycat License"
+        },
+        {
+          "line": 58,
+          "text": "6.0.19."
+        }
+      ]
+    },
+    {
+      "publisher": "Python Build Standalone",
+      "kind": "pinned-build-documentation",
+      "tag": "20200823",
+      "revision": "51a442d1ce41298e3007daf1c8ff334ea91576a2",
+      "url": "https://github.com/astral-sh/python-build-standalone/blob/51a442d1ce41298e3007daf1c8ff334ea91576a2/docs/technotes.rst",
+      "retained_document": {
+        "source": "metadata/bdb-license-evidence/pbs-20200823-technotes.rst",
+        "destination": "upstream-metadata/bdb-license-evidence/pbs-20200823-technotes.rst",
+        "sha256": "9aa60629e20533571a7e6cb0e51ea7c43d6493ee5913b11c79644d8950297c0d",
+        "size": 6113
+      },
+      "matching_literal_lines": [
+        {
+          "line": 54,
+          "text": "NDBM, GDBM, and Berkeley DB. Both NDBM and GDBM are GNU GPL Version 3."
+        },
+        {
+          "line": 55,
+          "text": "Modern versions of Berkeley DB are GNU AGPL v3. Versions 6.0.19 and"
+        },
+        {
+          "line": 56,
+          "text": "older are licensed under the Sleepycat License. The Sleepycat License"
+        },
+        {
+          "line": 58,
+          "text": "6.0.19."
+        }
+      ]
+    },
+    {
+      "publisher": "Oracle",
+      "kind": "announcement",
+      "url": "https://oss.oracle.com/pipermail/bdb/2013-June/000056.html",
+      "statement_summary": "The 6.0 announcement describes the 6.x release under AGPL terms.",
+      "evidence_method": "Coordinator primary-source review; this local audit does not fetch the page."
+    },
+    {
+      "publisher": "Oracle",
+      "kind": "6.0.20-changelog",
+      "url": "https://download.oracle.com/otndocs/products/berkeleydb/html/changelog_6_0.html",
+      "statement_summary": "The 6.0.20 changelog records an update of the LICENSE file to AGPL.",
+      "evidence_method": "Coordinator primary-source review; this local audit does not fetch the page."
+    }
+  ],
+  "license_review_boundary": "This record preserves literal source terms and differing publisher statements. It does not settle their legal interpretation or guarantee redistribution rights. Licensing review is independent from byte integrity, source retention and native runtime acceptance."
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "https://github.com/astral-sh/python-build-standalone",
+    "tag": "20200822",
+    "revision": "3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+    "source_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+    "source_sha256": "e8a54a9831e2ac02e4926d0ec02818d8d9ead039dec34180df6a35b813f2d8ce",
+    "source_sha256_origin": "computed after official HTTPS intake; not a publisher signature",
+    "archive": "pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+    "size": 161533
+  },
+  {
+    "repository": "https://github.com/astral-sh/python-build-standalone",
+    "tag": "20200823",
+    "revision": "51a442d1ce41298e3007daf1c8ff334ea91576a2",
+    "source_url": "https://codeload.github.com/astral-sh/python-build-standalone/tar.gz/51a442d1ce41298e3007daf1c8ff334ea91576a2",
+    "source_sha256": "504ea02973795b97fdf03d4360ba7988ce86f77449656fd450ba334547b56260",
+    "source_sha256_origin": "computed after official HTTPS intake; not a publisher signature",
+    "archive": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+    "size": 162232
+  }
+]

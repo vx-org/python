@@ -1,0 +1,7 @@
+[tools]
+python = "3.12.10"
+uv = "latest"
+actionlint = "latest"
+
+[settings]
+auto_install = true

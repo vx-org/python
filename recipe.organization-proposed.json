@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "tool": "python",
+  "version": "3.7.9",
+  "release_date": "2020-08-23",
+  "upstream_manifest": "https://github.com/vx-org/python/releases/tag/python-3.7.9-pbs-20200823",
+  "compatibility": {
+    "rez_next": ">=0.3.9",
+    "vx_rez_adapter": ">=0.1.0"
+  },
+  "package": {
+    "definition": {
+      "source": "package.py",
+      "sha256": "321b21056212caacacfe050b5060949af14f14429dc12bbe7dc0e0fdc995405b"
+    },
+    "description": "CPython 3.7.9 standalone interpreter with standard library and development files",
+    "tools": [
+      "python"
+    ],
+    "path_entries": [
+      "payload/install",
+      "payload/install/bin"
+    ],
+    "smoke_test": {
+      "command": [
+        "{root}/payload/install/python{exe}",
+        "-I",
+        "-c",
+        "\"\"\"Native acceptance script embedded unchanged in each target's smoke command.\"\"\"\n\nimport ctypes\nimport ensurepip\nimport hashlib\nimport json\nimport lzma\nimport os\nfrom pathlib import Path\nimport sqlite3\nimport ssl\nimport sys\nimport sysconfig\nimport tempfile\nimport venv\n\n\nassert sys.version_info[:3] == tuple(map(int, \"{version}\".split(\".\")))\nassert sys.implementation.name == \"cpython\"\nassert \"PYTHONHOME\" not in os.environ\nassert \"PYTHONPATH\" not in os.environ\n\napplication_root = Path(sys.executable).resolve().parent\nif sys.platform != \"win32\":\n    application_root = application_root.parent\nassert Path(sys.prefix).resolve() == application_root\nassert Path(sys.base_prefix).resolve() == application_root\ninclude = Path(sysconfig.get_path(\"include\"))\nassert (include / \"Python.h\").is_file()\nif sys.platform == \"win32\":\n    assert (application_root / \"libs\" / \"python37.lib\").is_file()\n    assert (application_root / \"vcruntime140.dll\").is_file()\nelse:\n    assert (application_root / \"lib\" / \"libpython3.7m.a\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"os.py\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"venv\", \"__init__.py\").is_file()\nassert ensurepip.version()\nassert ssl.OPENSSL_VERSION\nassert hashlib.sha256(b\"vx-python-native\").hexdigest()\nassert lzma.decompress(lzma.compress(b\"standalone-runtime\")) == b\"standalone-runtime\"\nassert ctypes.sizeof(ctypes.c_void_p) == 8\nwith sqlite3.connect(\":memory:\") as database:\n    assert database.execute(\"select 3 + 7\").fetchone() == (10,)\n\nwith tempfile.TemporaryDirectory(prefix=\"vx-python-venv-\") as temporary:\n    environment = Path(temporary) / \"environment\"\n    venv.EnvBuilder(with_pip=False).create(str(environment))\n    executable = environment / (\"Scripts/python.exe\" if sys.platform == \"win32\" else \"bin/python\")\n    assert executable.is_file()\n    import subprocess\n\n    completed = subprocess.run(\n        [str(executable), \"-I\", \"-c\", \"import json,sys;print(json.dumps([list(sys.version_info[:3]),sys.prefix,sys.base_prefix]))\"],\n        check=True,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        universal_newlines=True,\n    )\n    version, prefix, base_prefix = json.loads(completed.stdout)\n    assert version == [3, 7, 9]\n    assert Path(prefix).resolve() == environment.resolve()\n    assert Path(base_prefix).resolve() == application_root\n\nprint(\"VX_PYTHON_NATIVE_SMOKE_OK\")\n"
+      ],
+      "expect": "VX_PYTHON_NATIVE_SMOKE_OK",
+      "timeout_seconds": 120
+    }
+  },
+  "provenance": {
+    "repository": "https://github.com/astral-sh/python-build-standalone",
+    "revision": "3aa43064f27717808f0f2fbfc00a14ed91a00de2",
+    "source_url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+    "source_sha256": "e8a54a9831e2ac02e4926d0ec02818d8d9ead039dec34180df6a35b813f2d8ce",
+    "license": "Python-2.0 AND CNRI-Python AND LicenseRef-PBS-Bundled-Dependencies"
+  },
+  "metadata": [
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/PYTHON.json",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/PYTHON.json",
+      "sha256": "461fe150741425abdc0929567533f2a2e4a8b98eff03de9d1b015b37c95ee803"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/install/LICENSE.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/install/LICENSE.txt",
+      "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/install/tcl/tk8.6/license.terms",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/install/tcl/tk8.6/license.terms",
+      "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/install/tcl/tk8.6/demos/license.terms",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/install/tcl/tk8.6/demos/license.terms",
+      "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.bdb.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.bdb.txt",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.bzip2.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.bzip2.txt",
+      "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.cpython.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.cpython.txt",
+      "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.gdbm.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.gdbm.txt",
+      "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libX11.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libX11.txt",
+      "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libXau.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libXau.txt",
+      "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libedit.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libedit.txt",
+      "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libffi.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libffi.txt",
+      "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.liblzma.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.liblzma.txt",
+      "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libressl.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libressl.txt",
+      "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libuuid.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libuuid.txt",
+      "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libxcb.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.libxcb.txt",
+      "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.ncurses.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.ncurses.txt",
+      "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.openssl.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.openssl.txt",
+      "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.readline.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.readline.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.sqlite.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.sqlite.txt",
+      "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.tcl.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.tcl.txt",
+      "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.tix.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.tix.txt",
+      "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5"
+    },
+    {
+      "source": "metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.zlib.txt",
+      "destination": "upstream-metadata/x86_64-pc-windows-msvc/python/licenses/LICENSE.zlib.txt",
+      "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/PYTHON.json",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/PYTHON.json",
+      "sha256": "5cb3d3fc63083081f5b1bfa54ed0a9e8a10ae903cfab1e53304d33874396fd0d"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/install/lib/Tix8.4.3/license.terms",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/install/lib/Tix8.4.3/license.terms",
+      "sha256": "91ff35309038fcfab853c8634b7b743a179c211d8ff3cb174b579c8af3c3072d"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/install/lib/python3.7/LICENSE.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/install/lib/python3.7/LICENSE.txt",
+      "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/install/lib/tk8.6/demos/license.terms",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/install/lib/tk8.6/demos/license.terms",
+      "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.bdb.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.bdb.txt",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.bzip2.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.bzip2.txt",
+      "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.cpython.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.cpython.txt",
+      "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.gdbm.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.gdbm.txt",
+      "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libX11.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libX11.txt",
+      "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libXau.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libXau.txt",
+      "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libedit.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libedit.txt",
+      "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libffi.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libffi.txt",
+      "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.liblzma.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.liblzma.txt",
+      "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libressl.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libressl.txt",
+      "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libuuid.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libuuid.txt",
+      "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libxcb.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.libxcb.txt",
+      "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.ncurses.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.ncurses.txt",
+      "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.openssl.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.openssl.txt",
+      "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.readline.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.readline.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.sqlite.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.sqlite.txt",
+      "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.tcl.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.tcl.txt",
+      "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.tix.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.tix.txt",
+      "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5"
+    },
+    {
+      "source": "metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.zlib.txt",
+      "destination": "upstream-metadata/x86_64-unknown-linux-gnu/python/licenses/LICENSE.zlib.txt",
+      "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/PYTHON.json",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/PYTHON.json",
+      "sha256": "9af6f7204b731a98b9b7019435e5cd49e33f62e8190d29ba24b0dd47b7526dd5"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/install/lib/Tix8.4.3/license.terms",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/install/lib/Tix8.4.3/license.terms",
+      "sha256": "91ff35309038fcfab853c8634b7b743a179c211d8ff3cb174b579c8af3c3072d"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/install/lib/python3.7/LICENSE.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/install/lib/python3.7/LICENSE.txt",
+      "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/install/lib/tk8.6/demos/license.terms",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/install/lib/tk8.6/demos/license.terms",
+      "sha256": "2cde822b93ca16ae535c954b7dfe658b4ad10df2a193628d1b358f1765e8b198"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.bdb.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.bdb.txt",
+      "sha256": "3bdff06e69991c94664f2ef5c5f8096f60b7dbec071756ea6cc26b445e06ec5b"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.bzip2.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.bzip2.txt",
+      "sha256": "1f38bbc7caacafd65169276d759c0d88c991b753b643ce35d0e45ea1971dd441"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.cpython.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.cpython.txt",
+      "sha256": "625bb3496a42c596fe92e002edfc2ae14595e0b8c724b1c5981c0fd157740494"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.gdbm.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.gdbm.txt",
+      "sha256": "8d380d2a5cb833fcdd7a98ce6eb089db065fb3c42da0df5720a8df32b3c91d17"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libX11.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libX11.txt",
+      "sha256": "2daec087a88e7c9b8082557cdeebad5bbb8155a4137472f0b22e269cd99d0c1e"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libXau.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libXau.txt",
+      "sha256": "56abe29bb1d9806a9e04fa9f80fed2c0f18027594df3f098148d814aef6bddfa"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libedit.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libedit.txt",
+      "sha256": "29cea33c32bbc9785142386377915612a2fa786482c46843383384aded2e09b1"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libffi.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libffi.txt",
+      "sha256": "0f4d7a0bfb83c37465d42dc305f124189196cc0cc2cc8d6f8461103682aebbc5"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.liblzma.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.liblzma.txt",
+      "sha256": "828d5b508798d6a95c1c08ce5eee517a84ed1bda14eac58c440b6bce2c5cf1ca"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libressl.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libressl.txt",
+      "sha256": "d0e50c81ed659066a2c3087e52e26ac126f664d64bf1d8c3d02f93560b3f5106"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libuuid.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libuuid.txt",
+      "sha256": "122ee1f7e258f2c3c0e538a75c037684f420454bf3850ddc74ce750bbf5fe86b"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.libxcb.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.libxcb.txt",
+      "sha256": "c5ffbfeaa501071ceeb97b7de2c0d703fdaa35de01c0fb6cbac1c28453a3e9fd"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.ncurses.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.ncurses.txt",
+      "sha256": "74938cb79e87486e1b78e8e8b7c336cf6ba0c9c28eaf95ca85d80973f1d47aca"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.openssl.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.openssl.txt",
+      "sha256": "9c04cce50c4989d5601dd8b07f6ab922c40388b66ac736c9007cb1ed9d9dd560"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.readline.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.readline.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.sqlite.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.sqlite.txt",
+      "sha256": "38bef3d28b24f145ea293bd3b6eb4b20396982abc8303128fb493986ea5bc719"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.tcl.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.tcl.txt",
+      "sha256": "c0a69a2bfd757361ec7e6143973b103c90409316b49e9c88db26ad6388e79f16"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.tix.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.tix.txt",
+      "sha256": "3ac5cdd0bef6c43ce34c6a7ced452081d9e5a0bf94082b9f9147d23ec9e214f5"
+    },
+    {
+      "source": "metadata/x86_64-apple-darwin/python/licenses/LICENSE.zlib.txt",
+      "destination": "upstream-metadata/x86_64-apple-darwin/python/licenses/LICENSE.zlib.txt",
+      "sha256": "818922b2620f12801a12bf78e399644a30990e66824abd8ca8ec24d451d6f92c"
+    },
+    {
+      "source": "metadata/archive-intake.json",
+      "destination": "upstream-metadata/archive-intake.json",
+      "sha256": "49484c7f8db785511a3e6024f840314ea102897b3500fb20acab738b2d0c7846"
+    },
+    {
+      "source": "metadata/build-source-intake.json",
+      "destination": "upstream-metadata/build-source-intake.json",
+      "sha256": "16a8a668a5d9621d2eceaf583f60ed0d04cf1af69e1d51dff3de9d40f1f0f0bf"
+    },
+    {
+      "source": "metadata/build-sources/20200822/receipt.json",
+      "destination": "upstream-metadata/build-sources/20200822/receipt.json",
+      "sha256": "b0d4a13f01ecc3df46d52a0de227360445281dce41c2a589b0321f42a827ce96"
+    },
+    {
+      "source": "metadata/build-sources/20200822/downloads.py",
+      "destination": "upstream-metadata/build-sources/20200822/downloads.py",
+      "sha256": "248b34848c5dabd7fd0e6eeed6ca7f94ee4c33517793da548d992862391bd1c7"
+    },
+    {
+      "source": "metadata/build-sources/20200822/LICENSE",
+      "destination": "upstream-metadata/build-sources/20200822/LICENSE",
+      "sha256": "02e7aaf3645b50fb9056b18528e2ca3474a6628fe3396ae4dd326f6618e0aad7"
+    },
+    {
+      "source": "metadata/build-sources/20200823/receipt.json",
+      "destination": "upstream-metadata/build-sources/20200823/receipt.json",
+      "sha256": "82bafaed946b4f7362a50cfd485b38bb5ddcb6435111f6682186a98c9042b474"
+    },
+    {
+      "source": "metadata/build-sources/20200823/downloads.py",
+      "destination": "upstream-metadata/build-sources/20200823/downloads.py",
+      "sha256": "ed80fc0e47955e1e14ede1b26143bf6de591121cf79b9a77ae63ca8d492466d5"
+    },
+    {
+      "source": "metadata/build-sources/20200823/LICENSE",
+      "destination": "upstream-metadata/build-sources/20200823/LICENSE",
+      "sha256": "02e7aaf3645b50fb9056b18528e2ca3474a6628fe3396ae4dd326f6618e0aad7"
+    },
+    {
+      "source": "metadata/source-closure.json",
+      "destination": "upstream-metadata/source-closure.json",
+      "sha256": "41c0e062cfa9f195969bd36ebec4cd14bbe4b78d5fdb0aec2f18c14986559b2d"
+    },
+    {
+      "source": "metadata/gettext-source/gnulib-local/lib/libxml/COPYING",
+      "destination": "upstream-metadata/gettext-source/gnulib-local/lib/libxml/COPYING",
+      "sha256": "c5c63674f8a83c4d2e385d96d1c670a03cb871ba2927755467017317878574bd"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-runtime/libasprintf/COPYING.LIB",
+      "destination": "upstream-metadata/gettext-source/gettext-runtime/libasprintf/COPYING.LIB",
+      "sha256": "3fe5361f24b7c49ba12911c08f5a33f9cb18871d95d9fb881f5b8a4793e04288"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-runtime/libasprintf/COPYING",
+      "destination": "upstream-metadata/gettext-source/gettext-runtime/libasprintf/COPYING",
+      "sha256": "03133addae5b99a6148c538300e6d97074453089be1423b741bd081f18e2b298"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-runtime/intl/COPYING.LIB",
+      "destination": "upstream-metadata/gettext-source/gettext-runtime/intl/COPYING.LIB",
+      "sha256": "3fe5361f24b7c49ba12911c08f5a33f9cb18871d95d9fb881f5b8a4793e04288"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-runtime/COPYING",
+      "destination": "upstream-metadata/gettext-source/gettext-runtime/COPYING",
+      "sha256": "7ef2cdfe58e0c0460657b6598b49af29d4e03c1e41cbaf0e1da1eb8ad74b95d0"
+    },
+    {
+      "source": "metadata/gettext-source/libtextstyle/lib/libxml/COPYING",
+      "destination": "upstream-metadata/gettext-source/libtextstyle/lib/libxml/COPYING",
+      "sha256": "c5c63674f8a83c4d2e385d96d1c670a03cb871ba2927755467017317878574bd"
+    },
+    {
+      "source": "metadata/gettext-source/libtextstyle/COPYING",
+      "destination": "upstream-metadata/gettext-source/libtextstyle/COPYING",
+      "sha256": "e79e9c8a0c85d735ff98185918ec94ed7d175efc377012787aebcf3b80f0d90b"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-tools/gnulib-lib/libxml/COPYING",
+      "destination": "upstream-metadata/gettext-source/gettext-tools/gnulib-lib/libxml/COPYING",
+      "sha256": "c5c63674f8a83c4d2e385d96d1c670a03cb871ba2927755467017317878574bd"
+    },
+    {
+      "source": "metadata/gettext-source/gettext-tools/COPYING",
+      "destination": "upstream-metadata/gettext-source/gettext-tools/COPYING",
+      "sha256": "5d4cff30d5038f82a0edc79798456049b61e1752fdb7e9ab1f4bfb9fae3a7303"
+    },
+    {
+      "source": "metadata/gettext-source/COPYING",
+      "destination": "upstream-metadata/gettext-source/COPYING",
+      "sha256": "e79e9c8a0c85d735ff98185918ec94ed7d175efc377012787aebcf3b80f0d90b"
+    },
+    {
+      "source": "metadata/bdb-source/LICENSE",
+      "destination": "upstream-metadata/bdb-source/LICENSE",
+      "sha256": "b78815181a53241f9347c6b47d1031fd669946f863e1edc807a291354cec024b"
+    },
+    {
+      "source": "metadata/bdb-license-evidence/pbs-20200822-technotes.rst",
+      "destination": "upstream-metadata/bdb-license-evidence/pbs-20200822-technotes.rst",
+      "sha256": "9aa60629e20533571a7e6cb0e51ea7c43d6493ee5913b11c79644d8950297c0d"
+    },
+    {
+      "source": "metadata/bdb-license-evidence/pbs-20200823-technotes.rst",
+      "destination": "upstream-metadata/bdb-license-evidence/pbs-20200823-technotes.rst",
+      "sha256": "9aa60629e20533571a7e6cb0e51ea7c43d6493ee5913b11c79644d8950297c0d"
+    },
+    {
+      "source": "metadata/bdb-license-provenance.json",
+      "destination": "upstream-metadata/bdb-license-provenance.json",
+      "sha256": "a72ec00811c5d922c914a35e2da17458dc3c98e97734cc9c7cba9020ea358505"
+    },
+    {
+      "source": "metadata/source-retention.json",
+      "destination": "upstream-metadata/source-retention.json",
+      "sha256": "9a3a026894ed5f5b5149ebc1276ae2d924b25af9dcb9d6db187dbef8e44d4b16"
+    }
+  ],
+  "targets": [
+    {
+      "triple": "x86_64-pc-windows-msvc",
+      "platform": "windows",
+      "arch": "x86_64",
+      "runner": "windows-2025",
+      "status": "supported",
+      "upstream": {
+        "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+        "sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89"
+      },
+      "payload": {
+        "format": "tar.zst",
+        "mappings": [
+          {
+            "source": "python",
+            "destination": "."
+          }
+        ]
+      },
+      "smoke_test": {
+        "command": [
+          "{root}/payload/install/python{exe}",
+          "-I",
+          "-c",
+          "\"\"\"Native acceptance script embedded unchanged in each target's smoke command.\"\"\"\n\nimport ctypes\nimport ensurepip\nimport hashlib\nimport json\nimport lzma\nimport os\nfrom pathlib import Path\nimport sqlite3\nimport ssl\nimport sys\nimport sysconfig\nimport tempfile\nimport venv\n\n\nassert sys.version_info[:3] == tuple(map(int, \"{version}\".split(\".\")))\nassert sys.implementation.name == \"cpython\"\nassert \"PYTHONHOME\" not in os.environ\nassert \"PYTHONPATH\" not in os.environ\n\napplication_root = Path(sys.executable).resolve().parent\nif sys.platform != \"win32\":\n    application_root = application_root.parent\nassert Path(sys.prefix).resolve() == application_root\nassert Path(sys.base_prefix).resolve() == application_root\ninclude = Path(sysconfig.get_path(\"include\"))\nassert (include / \"Python.h\").is_file()\nif sys.platform == \"win32\":\n    assert (application_root / \"libs\" / \"python37.lib\").is_file()\n    assert (application_root / \"vcruntime140.dll\").is_file()\nelse:\n    assert (application_root / \"lib\" / \"libpython3.7m.a\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"os.py\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"venv\", \"__init__.py\").is_file()\nassert ensurepip.version()\nassert ssl.OPENSSL_VERSION\nassert hashlib.sha256(b\"vx-python-native\").hexdigest()\nassert lzma.decompress(lzma.compress(b\"standalone-runtime\")) == b\"standalone-runtime\"\nassert ctypes.sizeof(ctypes.c_void_p) == 8\nwith sqlite3.connect(\":memory:\") as database:\n    assert database.execute(\"select 3 + 7\").fetchone() == (10,)\n\nwith tempfile.TemporaryDirectory(prefix=\"vx-python-venv-\") as temporary:\n    environment = Path(temporary) / \"environment\"\n    venv.EnvBuilder(with_pip=False).create(str(environment))\n    executable = environment / (\"Scripts/python.exe\" if sys.platform == \"win32\" else \"bin/python\")\n    assert executable.is_file()\n    import subprocess\n\n    completed = subprocess.run(\n        [str(executable), \"-I\", \"-c\", \"import json,sys;print(json.dumps([list(sys.version_info[:3]),sys.prefix,sys.base_prefix]))\"],\n        check=True,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        universal_newlines=True,\n    )\n    version, prefix, base_prefix = json.loads(completed.stdout)\n    assert version == [3, 7, 9]\n    assert Path(prefix).resolve() == environment.resolve()\n    assert Path(base_prefix).resolve() == application_root\n\nprint(\"VX_PYTHON_NATIVE_SMOKE_OK\")\n"
+        ],
+        "expect": "VX_PYTHON_NATIVE_SMOKE_OK",
+        "timeout_seconds": 120
+      }
+    },
+    {
+      "triple": "x86_64-unknown-linux-gnu",
+      "platform": "linux",
+      "arch": "x86_64",
+      "runner": "ubuntu-24.04",
+      "status": "supported",
+      "upstream": {
+        "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+        "sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543"
+      },
+      "payload": {
+        "format": "tar.zst",
+        "mappings": [
+          {
+            "source": "python",
+            "destination": "."
+          },
+          {
+            "source": "python/install/bin/python3.7m",
+            "destination": "install/bin/python",
+            "executable": true
+          }
+        ]
+      },
+      "smoke_test": {
+        "command": [
+          "{root}/payload/install/bin/python",
+          "-I",
+          "-c",
+          "\"\"\"Native acceptance script embedded unchanged in each target's smoke command.\"\"\"\n\nimport ctypes\nimport ensurepip\nimport hashlib\nimport json\nimport lzma\nimport os\nfrom pathlib import Path\nimport sqlite3\nimport ssl\nimport sys\nimport sysconfig\nimport tempfile\nimport venv\n\n\nassert sys.version_info[:3] == tuple(map(int, \"{version}\".split(\".\")))\nassert sys.implementation.name == \"cpython\"\nassert \"PYTHONHOME\" not in os.environ\nassert \"PYTHONPATH\" not in os.environ\n\napplication_root = Path(sys.executable).resolve().parent\nif sys.platform != \"win32\":\n    application_root = application_root.parent\nassert Path(sys.prefix).resolve() == application_root\nassert Path(sys.base_prefix).resolve() == application_root\ninclude = Path(sysconfig.get_path(\"include\"))\nassert (include / \"Python.h\").is_file()\nif sys.platform == \"win32\":\n    assert (application_root / \"libs\" / \"python37.lib\").is_file()\n    assert (application_root / \"vcruntime140.dll\").is_file()\nelse:\n    assert (application_root / \"lib\" / \"libpython3.7m.a\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"os.py\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"venv\", \"__init__.py\").is_file()\nassert ensurepip.version()\nassert ssl.OPENSSL_VERSION\nassert hashlib.sha256(b\"vx-python-native\").hexdigest()\nassert lzma.decompress(lzma.compress(b\"standalone-runtime\")) == b\"standalone-runtime\"\nassert ctypes.sizeof(ctypes.c_void_p) == 8\nwith sqlite3.connect(\":memory:\") as database:\n    assert database.execute(\"select 3 + 7\").fetchone() == (10,)\n\nwith tempfile.TemporaryDirectory(prefix=\"vx-python-venv-\") as temporary:\n    environment = Path(temporary) / \"environment\"\n    venv.EnvBuilder(with_pip=False).create(str(environment))\n    executable = environment / (\"Scripts/python.exe\" if sys.platform == \"win32\" else \"bin/python\")\n    assert executable.is_file()\n    import subprocess\n\n    completed = subprocess.run(\n        [str(executable), \"-I\", \"-c\", \"import json,sys;print(json.dumps([list(sys.version_info[:3]),sys.prefix,sys.base_prefix]))\"],\n        check=True,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        universal_newlines=True,\n    )\n    version, prefix, base_prefix = json.loads(completed.stdout)\n    assert version == [3, 7, 9]\n    assert Path(prefix).resolve() == environment.resolve()\n    assert Path(base_prefix).resolve() == application_root\n\nprint(\"VX_PYTHON_NATIVE_SMOKE_OK\")\n"
+        ],
+        "expect": "VX_PYTHON_NATIVE_SMOKE_OK",
+        "timeout_seconds": 120
+      }
+    },
+    {
+      "triple": "x86_64-apple-darwin",
+      "platform": "osx",
+      "arch": "x86_64",
+      "runner": "macos-15-intel",
+      "status": "supported",
+      "upstream": {
+        "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+        "sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8"
+      },
+      "payload": {
+        "format": "tar.zst",
+        "mappings": [
+          {
+            "source": "python",
+            "destination": "."
+          },
+          {
+            "source": "python/install/bin/python3.7m",
+            "destination": "install/bin/python",
+            "executable": true
+          }
+        ]
+      },
+      "smoke_test": {
+        "command": [
+          "{root}/payload/install/bin/python",
+          "-I",
+          "-c",
+          "\"\"\"Native acceptance script embedded unchanged in each target's smoke command.\"\"\"\n\nimport ctypes\nimport ensurepip\nimport hashlib\nimport json\nimport lzma\nimport os\nfrom pathlib import Path\nimport sqlite3\nimport ssl\nimport sys\nimport sysconfig\nimport tempfile\nimport venv\n\n\nassert sys.version_info[:3] == tuple(map(int, \"{version}\".split(\".\")))\nassert sys.implementation.name == \"cpython\"\nassert \"PYTHONHOME\" not in os.environ\nassert \"PYTHONPATH\" not in os.environ\n\napplication_root = Path(sys.executable).resolve().parent\nif sys.platform != \"win32\":\n    application_root = application_root.parent\nassert Path(sys.prefix).resolve() == application_root\nassert Path(sys.base_prefix).resolve() == application_root\ninclude = Path(sysconfig.get_path(\"include\"))\nassert (include / \"Python.h\").is_file()\nif sys.platform == \"win32\":\n    assert (application_root / \"libs\" / \"python37.lib\").is_file()\n    assert (application_root / \"vcruntime140.dll\").is_file()\nelse:\n    assert (application_root / \"lib\" / \"libpython3.7m.a\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"os.py\").is_file()\nassert Path(sysconfig.get_path(\"stdlib\"), \"venv\", \"__init__.py\").is_file()\nassert ensurepip.version()\nassert ssl.OPENSSL_VERSION\nassert hashlib.sha256(b\"vx-python-native\").hexdigest()\nassert lzma.decompress(lzma.compress(b\"standalone-runtime\")) == b\"standalone-runtime\"\nassert ctypes.sizeof(ctypes.c_void_p) == 8\nwith sqlite3.connect(\":memory:\") as database:\n    assert database.execute(\"select 3 + 7\").fetchone() == (10,)\n\nwith tempfile.TemporaryDirectory(prefix=\"vx-python-venv-\") as temporary:\n    environment = Path(temporary) / \"environment\"\n    venv.EnvBuilder(with_pip=False).create(str(environment))\n    executable = environment / (\"Scripts/python.exe\" if sys.platform == \"win32\" else \"bin/python\")\n    assert executable.is_file()\n    import subprocess\n\n    completed = subprocess.run(\n        [str(executable), \"-I\", \"-c\", \"import json,sys;print(json.dumps([list(sys.version_info[:3]),sys.prefix,sys.base_prefix]))\"],\n        check=True,\n        stdout=subprocess.PIPE,\n        stderr=subprocess.PIPE,\n        universal_newlines=True,\n    )\n    version, prefix, base_prefix = json.loads(completed.stdout)\n    assert version == [3, 7, 9]\n    assert Path(prefix).resolve() == environment.resolve()\n    assert Path(base_prefix).resolve() == application_root\n\nprint(\"VX_PYTHON_NATIVE_SMOKE_OK\")\n"
+        ],
+        "expect": "VX_PYTHON_NATIVE_SMOKE_OK",
+        "timeout_seconds": 120
+      }
+    }
+  ],
+  "unsupported_targets": [
+    {
+      "triple": "aarch64-pc-windows-msvc",
+      "status": "unsupported",
+      "reason": "No Python 3.7.9 standalone archive in the audited historical PBS releases."
+    },
+    {
+      "triple": "aarch64-unknown-linux-gnu",
+      "status": "unsupported",
+      "reason": "No Python 3.7.9 standalone archive in the audited historical PBS releases."
+    },
+    {
+      "triple": "aarch64-apple-darwin",
+      "status": "unsupported",
+      "reason": "No Python 3.7.9 standalone archive in the audited historical PBS releases."
+    }
+  ],
+  "release_assets": [
+    {
+      "name": "bdb-db-6.0.19.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/bdb-db-6.0.19.tar.gz",
+      "sha256": "2917c28f60903908c2ca4587ded1363b812c4e830a5326aaa77c9879d13ae18e",
+      "size": 36541923
+    },
+    {
+      "name": "bzip2-bzip2-1.0.8.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/bzip2-bzip2-1.0.8.tar.gz",
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269",
+      "size": 810029
+    },
+    {
+      "name": "cpython-3.7-Python-3.7.9.tar.xz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7-Python-3.7.9.tar.xz",
+      "sha256": "91923007b05005b5f9bd46f3b9172248aea5abc1543e8a636d59e629c3331b01",
+      "size": 17389636
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-apple-darwin-pgo-20200823T2228.tar.zst",
+      "sha256": "53657e7712cc7b24491fb1fc66dcc8f47a577fc77df137178746987ba4c5afb8",
+      "size": 26136896
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-pc-windows-msvc-shared-pgo-20200823T0118.tar.zst",
+      "sha256": "8769a244cfe54c32c5253b78897a0fe82fe419dfde653b1afc3f5f20594cca89",
+      "size": 31429615
+    },
+    {
+      "name": "cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/cpython-3.7.9-x86_64-unknown-linux-gnu-pgo-20200823T0036.tar.zst",
+      "sha256": "c6d6256d13e929e77e7ee6e53470fe63ad19d173fee6d56bb1b2dbda67081543",
+      "size": 28357634
+    },
+    {
+      "name": "gettext-gettext-0.21.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/gettext-gettext-0.21.tar.gz",
+      "sha256": "c77d0da3102aec9c07f43671e60611ebff89a996ef159497ce8e59d075786b12",
+      "size": 24181849
+    },
+    {
+      "name": "libedit-libedit-20191231-3.1.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libedit-libedit-20191231-3.1.tar.gz",
+      "sha256": "dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071",
+      "size": 516801
+    },
+    {
+      "name": "libffi-libffi-3.3.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libffi-libffi-3.3.tar.gz",
+      "sha256": "72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056",
+      "size": 1305466
+    },
+    {
+      "name": "libressl-libressl-3.1.4.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libressl-libressl-3.1.4.tar.gz",
+      "sha256": "414c149c9963983f805a081db5bd3aec146b5f82d529bb63875ac941b25dcbb6",
+      "size": 3767238
+    },
+    {
+      "name": "libX11-libX11-1.6.8.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libX11-libX11-1.6.8.tar.gz",
+      "sha256": "69d1a27cba722dca897198a23fa8d3cad3ec0c715e00205ea4398ec68a4258a5",
+      "size": 3144482
+    },
+    {
+      "name": "libXau-libXau-1.0.7.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libXau-libXau-1.0.7.tar.gz",
+      "sha256": "cbb81b4ba0f585faac8b9914b0bdbef6e0ef886a30c70d6584e2b30efeda9ac4",
+      "size": 349278
+    },
+    {
+      "name": "libxcb-libxcb-1.13.1.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/libxcb-libxcb-1.13.1.tar.gz",
+      "sha256": "f09a76971437780a602303170fd51b5f7474051722bc39d566a272d2c4bde1b5",
+      "size": 636748
+    },
+    {
+      "name": "ncurses-ncurses-6.2.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/ncurses-ncurses-6.2.tar.gz",
+      "sha256": "30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d",
+      "size": 3425862
+    },
+    {
+      "name": "openssl-openssl-1.1.1g.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/openssl-openssl-1.1.1g.tar.gz",
+      "sha256": "ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46",
+      "size": 9801502
+    },
+    {
+      "name": "pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/pbs-20200822-3aa43064f27717808f0f2fbfc00a14ed91a00de2.tar.gz",
+      "sha256": "e8a54a9831e2ac02e4926d0ec02818d8d9ead039dec34180df6a35b813f2d8ce",
+      "size": 161533
+    },
+    {
+      "name": "pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/pbs-20200823-51a442d1ce41298e3007daf1c8ff334ea91576a2.tar.gz",
+      "sha256": "504ea02973795b97fdf03d4360ba7988ce86f77449656fd450ba334547b56260",
+      "size": 162232
+    },
+    {
+      "name": "pip-pip-20.2.2.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/pip-pip-20.2.2.tar.gz",
+      "sha256": "58a3b0b55ee2278104165c7ee7bc8e2db6f635067f3c66cf637113ec5aa71584",
+      "size": 1496965
+    },
+    {
+      "name": "readline-readline-8.0.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/readline-readline-8.0.tar.gz",
+      "sha256": "e339f51971478d369f8a053a330a190781acb9864cf4c541060f12078948e461",
+      "size": 2975937
+    },
+    {
+      "name": "setuptools-setuptools-49.6.0.zip",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/setuptools-setuptools-49.6.0.zip",
+      "sha256": "46bd862894ed22c2edff033c758c2dc026324788d758e96788e8f7c11f4e9707",
+      "size": 2188590
+    },
+    {
+      "name": "sqlite-sqlite-autoconf-3330000.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/sqlite-sqlite-autoconf-3330000.tar.gz",
+      "sha256": "106a2c48c7f75a298a7557bcc0d5f4f454e5b43811cc738b7ca294d6956bbb15",
+      "size": 2913759
+    },
+    {
+      "name": "tcl-tcl8.6.10-src.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/tcl-tcl8.6.10-src.tar.gz",
+      "sha256": "5196dbf6638e3df8d5c87b5815c8c2b758496eb6f0e41446596c9a4e638d87ed",
+      "size": 10144235
+    },
+    {
+      "name": "tix-tix-8.4.3.6.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/tix-tix-8.4.3.6.tar.gz",
+      "sha256": "f7b21d115867a41ae5fd7c635a4c234d3ca25126c3661eb36028c6e25601f85e",
+      "size": 1836451
+    },
+    {
+      "name": "tk-tk8.6.10-src.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/tk-tk8.6.10-src.tar.gz",
+      "sha256": "63df418a859d0a463347f95ded5cd88a3dd3aaa1ceecaeee362194bc30f3e386",
+      "size": 4444764
+    },
+    {
+      "name": "uuid-libuuid-1.0.3.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/uuid-libuuid-1.0.3.tar.gz",
+      "sha256": "46af3275291091009ad7f1b899de3d0cea0252737550e7919d17237997db5644",
+      "size": 318256
+    },
+    {
+      "name": "xz-xz-5.2.5.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/xz-xz-5.2.5.tar.gz",
+      "sha256": "f6f4910fd033078738bd82bfba4f49219d03b17eb0794eb91efbae419f4aba10",
+      "size": 1791345
+    },
+    {
+      "name": "zlib-zlib-1.2.11.tar.gz",
+      "url": "https://github.com/vx-org/python/releases/download/python-3.7.9-pbs-20200823/zlib-zlib-1.2.11.tar.gz",
+      "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
+      "size": 607698
+    }
+  ]
+}

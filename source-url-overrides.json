@@ -1,0 +1,6 @@
+{
+  "bdb@6.0.19": "https://mirror.freedif.org/pub/blfs/conglomeration/db/db-6.0.19.tar.gz",
+  "libX11@1.6.8": "https://xorg.freedesktop.org/archive/individual/lib/libX11-1.6.8.tar.gz",
+  "libXau@1.0.7": "https://xorg.freedesktop.org/archive/individual/lib/libXau-1.0.7.tar.gz",
+  "zlib@1.2.11": "https://zlib.net/fossils/zlib-1.2.11.tar.gz"
+}
