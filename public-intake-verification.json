@@ -1,0 +1,26 @@
+{
+  "schema": "python-intake-remote-byte-verification/v1",
+  "recorded_at": "2026-10-10T00:08:20.835814+00:00",
+  "stage": "public",
+  "release_id": 408433087,
+  "source_commit": "1ffcf102a7976b1d96a595d01767eeeb79e35829",
+  "immutable": true,
+  "assets": 60,
+  "bytes": 217117323,
+  "native_runtime_acceptance": "not-run",
+  "release_url": "https://github.com/vx-org/python/releases/tag/python-3.7.9-pbs-20200823",
+  "ancillary_pins": {
+    "intake-assets.json": {
+      "sha256": "5db90506ae76c24bef11dd1eec6e0201f5a42d0365699dc2ebf6b1e8b4244e9e",
+      "size": 44712
+    },
+    "release-assets.json": {
+      "sha256": "8aa2cd202007faa1a130f7de0df73e58774505346895f352c32011467db2300c",
+      "size": 8058
+    },
+    "intake-metadata.tar.gz": {
+      "sha256": "aa779adb49a12b93a1983cab71bad9a4ae5648ac8327daa952d6f26e06ab4f84",
+      "size": 224871
+    }
+  }
+}
