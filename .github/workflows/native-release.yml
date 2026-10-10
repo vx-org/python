@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   native:
-    uses: vx-org/vx-rez-packages/.github/workflows/runtime-release.yml@6f47843c52a77578fa7987188f73f7d751ce1b46
+    uses: vx-org/vx-rez-packages/.github/workflows/runtime-release.yml@8ca39f087bee99307e9bd5f2b61b1915791df581
     with:
-      tooling-ref: 6f47843c52a77578fa7987188f73f7d751ce1b46
+      tooling-ref: 8ca39f087bee99307e9bd5f2b61b1915791df581
       publish: ${{ github.event_name == 'push' }}
