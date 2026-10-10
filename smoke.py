@@ -44,9 +44,14 @@ with sqlite3.connect(":memory:") as database:
 
 with tempfile.TemporaryDirectory(prefix="vx-python-venv-") as temporary:
     environment = Path(temporary) / "environment"
-    venv.EnvBuilder(with_pip=False).create(str(environment))
+    # Symlink the interpreter rather than copying it. A copy resolves the payload's
+    # $ORIGIN-relative libpython against the venv tree, where it is absent, so the
+    # venv launcher fails to start even though the payload interpreter is intact.
+    venv.EnvBuilder(with_pip=False, symlinks=True).create(str(environment))
     executable = environment / ("Scripts/python.exe" if sys.platform == "win32" else "bin/python")
     assert executable.is_file()
+    if sys.platform != "win32":
+        assert executable.is_symlink(), "venv copied the interpreter instead of symlinking it"
     import subprocess
 
     completed = subprocess.run(
