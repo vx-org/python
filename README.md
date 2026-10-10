@@ -89,6 +89,8 @@ assets with an empty cache and successfully resolves and runs this package.
 
 ## Native validation
 
+The native workflow pins shared tooling commit `6f47843c52a77578fa7987188f73f7d751ce1b46` and builds every supported recipe target on its matching runner. Pull requests and manual runs verify bundles through public SDK 0.3.10 and adapter 0.1.1. Pushing the recipe's `python-3.7.9` tag also publishes the verified bundles and index, verifies every public asset, and repeats native acquisition from an empty cache and then offline. Historical PBS intake tags do not trigger this workflow.
+
 The native smoke checks the real interpreter, binary extension modules, bundled
 standard library, headers and link libraries, then creates and executes a fresh
 virtual environment. A separate VX consumer acceptance run must still verify
