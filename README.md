@@ -63,10 +63,17 @@ the distinction between computed intake digests and historical recipe pins.
 Temporary redirect query parameters are omitted from public receipts; original
 acquisition receipts remain local. It also creates
 `recipe.organization-proposed.json`, whose target URLs and `release_assets`
-point to the proposed organization intake tag. **Promote this recipe only after
-the public immutable release is downloaded and every asset name, size and
-SHA256 has been verified.** The helper leaves the current recipe's acquisition
-URLs unchanged and updates only its public source-receipt metadata digest.
+point to the organization intake tag. The current recipe was promoted after
+the public release became immutable and all 60 assets (217,117,323 bytes) were
+downloaded again and verified by name, size and SHA256. The public verification
+receipt is retained in `public-intake-verification.json`.
+
+The published intake metadata is bound to source commit
+`1ffcf102a7976b1d96a595d01767eeeb79e35829`. Run
+`verify_release_readback.py --root` against that frozen checkout when checking
+this historical release; the promoted recipe uses the verified organization
+URLs. For a new intake, promote its generated recipe only after the same public
+immutability and byte verification gates pass.
 
 `prepare_recipe.py` performs the initial audit bootstrap. After regenerating a
 recipe, complete source retention again and run `prepare_release_assets.py` as

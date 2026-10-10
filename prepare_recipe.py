@@ -143,12 +143,12 @@ def main() -> None:
         "version": "3.7.9",
         "release_date": "2020-08-23",
         "upstream_manifest": "https://github.com/astral-sh/python-build-standalone/releases/tag/20200822",
-        "compatibility": {"rez_next": ">=0.3.9", "vx_rez_adapter": ">=0.1.0"},
+        "compatibility": {"rez_next": ">=0.3.10", "vx_rez_adapter": ">=0.1.1"},
         "package": {
             "definition": {"source": "package.py", "sha256": sha256((ROOT / "package.py").read_bytes())},
             "description": "CPython 3.7.9 standalone interpreter with standard library and development files",
             "tools": ["python"],
-            "path_entries": ["payload/install", "payload/install/bin"],
+            "path_entries": ["payload/install/bin", "payload/install"],
             "smoke_test": targets[0]["smoke_test"],
         },
         "provenance": {
