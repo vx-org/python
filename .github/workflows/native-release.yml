@@ -1,0 +1,28 @@
+name: Native Rez packages
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'python-*'
+      - '!python-*-pbs-*'
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    if: github.event_name != 'push'
+    uses: vx-org/vx-rez-packages/.github/workflows/runtime-release.yml@6f47843c52a77578fa7987188f73f7d751ce1b46
+    with:
+      tooling-ref: 6f47843c52a77578fa7987188f73f7d751ce1b46
+
+  publish:
+    if: github.event_name == 'push'
+    permissions:
+      contents: write
+    uses: vx-org/vx-rez-packages/.github/workflows/runtime-release.yml@6f47843c52a77578fa7987188f73f7d751ce1b46
+    with:
+      tooling-ref: 6f47843c52a77578fa7987188f73f7d751ce1b46
+      publish: true
